@@ -267,6 +267,10 @@
     text-align: center;
 }
 
+.card:hover {
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
 h2 {
     font-size: 18px;
 }
@@ -387,37 +391,79 @@ a:hover {
 
 
 
-.style1 {
+.style1,
+.style2,
+.style3,
+.style4 {
     display: inline-block;
     opacity: 0;
     transform: translateY(1em);
-    animation: showCard 2s ease-out forwards;
 }
 
-@keyframes showCard {
+@keyframes showCard1 {
     0% {
         opacity: 0;
-        transform: translateX(1em);
+        transform: translateY(1em);
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
 }
 
-.word-animation span:nth-child(1) {
+@keyframes showCard2 {
+    0% {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes showCard3 {
+    0% {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes showCard4 {
+    0% {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.style1 {
+    animation: showCard1 2s ease-in forwards;
     animation-delay: 0s;
 }
 
-.word-animation span:nth-child(2) {
+.style2 {
+    animation: showCard2 2s ease-in forwards;
     animation-delay: 1s;
 }
 
-.word-animation span:nth-child(3) {
+.style3 {
+    animation: showCard3 2s ease-in forwards;
     animation-delay: 2s;
 }
 
-.word-animation span:nth-child(4) {
+.style4 {
+    animation: showCard4 2s ease-in forwards;
     animation-delay: 3s;
 }

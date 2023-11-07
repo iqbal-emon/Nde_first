@@ -238,8 +238,36 @@ cardContainer4.style.marginLeft = '100px';
     cardContainer4.appendChild(card);
   
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  };
 
+  var observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      // If entry (card) is visible
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'opacity 1s, transform 1s';
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target); // Stop observing after animation
+      }
+    });
+  }, observerOptions);
 
+  // Target all cards
+  var cards = document.querySelectorAll('.card');
+
+  cards.forEach((card, index) => {
+    card.style.opacity = 0;
+    card.style.transform = 'translateY(100%)'; // Start from the bottom
+    setTimeout(() => {
+      observer.observe(card);
+    }, 600 * index); // 2-second delay between cards
+  });
+});
 
 
 
