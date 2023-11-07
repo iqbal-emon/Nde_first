@@ -1,7 +1,8 @@
 .navbar {
     display: flex;
     background: white;
-    justify-content: center;
+    /* justify-content: center; */
+    padding-top: 13px;
 
 
 }
@@ -40,7 +41,7 @@
     background-color: none;
 }
 
-.card {
+.car {
     display: flex;
 
 }
@@ -175,4 +176,248 @@
 
 #he {
     opacity: 0.8;
+}
+
+.feature1 {
+    background-image: url('./image/card2/fourth.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 420px;
+    width: 400px;
+    text-align: center;
+    color: white;
+
+
+}
+
+.features {
+    display: flex;
+}
+
+.features2 {
+    display: flex;
+
+}
+
+.feature2 {
+    margin-left: 20px;
+    background-image: url('./image/card2/two.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    color: white;
+}
+
+.feature3 {
+    margin-left: 20px;
+    background-image: url('./image/card2/third.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    color: white;
+
+}
+
+.feature4 {
+    margin-left: 20px;
+    background-image: url('./image/card2/one (1).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1020px;
+    height: 200px;
+    text-align: center;
+    color: white;
+
+}
+
+.features {
+    margin-left: 30px;
+}
+
+.btn6 {
+    background-color: transparent;
+    border: 2px solid #000;
+
+}
+
+.titie {
+    margin-top: 20px;
+    background-color: gray;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    padding-top: 1px;
+
+
+}
+
+.card {
+
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.container {
+
+    margin-left: 100px;
+}
+
+.lastest {
+    margin-top: 20px;
+    background-color: gray;
+    height: 60px;
+    text-align: center;
+    padding-top: 1px;
+}
+
+#container3 {
+    margin-left: 100px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: black;
+    width: auto;
+    height: 150px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: start;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.extra {
+    padding-left: 40px;
+}
+
+.navbar2 {
+
+    justify-content: space-between;
+    margin-left: 35%;
+}
+
+a {
+    text-decoration: none;
+    font-size: larger;
+    margin: 20px;
+    color: black;
+
+}
+
+a:hover {
+    color: rgb(97, 185, 199);
+}
+
+.navbar3 {
+    margin-left: 200px;
+    justify-content: space-between;
+}
+
+.images {
+    margin-left: 20px;
+}
+
+#ca {
+    margin-top: 30px;
+}
+
+.container5 {
+    margin-top: 20px;
+    background-color: gray;
+    height: 60px;
+    text-align: center;
+    padding-top: 1px;
+}
+
+.word-animation {
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.word-animation span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(1em);
+    animation: showWord 2s ease-out forwards;
+}
+
+@keyframes showWord {
+    0% {
+        opacity: 0;
+        transform: translateX(1em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.word-animation span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.word-animation span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.word-animation span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.word-animation span:nth-child(4) {
+    animation-delay: 3s;
+}
+
+
+
+.style1 {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(1em);
+    animation: showCard 2s ease-out forwards;
+}
+
+@keyframes showCard {
+    0% {
+        opacity: 0;
+        transform: translateX(1em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.word-animation span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.word-animation span:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.word-animation span:nth-child(3) {
+    animation-delay: 2s;
+}
+
+.word-animation span:nth-child(4) {
+    animation-delay: 3s;
 }
