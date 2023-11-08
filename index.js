@@ -140,7 +140,8 @@ const cardData3 = [
   {
     backgroundImage: './image/card/shoe1.jpg',
     title: 'Men Casual Shoe',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
+     title: 'Men Casual Shirt',
+        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
@@ -154,36 +155,55 @@ const cardData3 = [
   }
 ];
 
+const container33 = document.getElementById('container3');
+
 cardData3.forEach(data => {
-    const card = document.createElement('div');
-    card.classList.add('carde');
-    
+  const card = document.createElement('div');
+  card.classList.add('carde');
 
   const imageElement = document.createElement('img');
   imageElement.src = data.backgroundImage;
   imageElement.height = 300;
   imageElement.width = 400;
-imageElement.style.borderRadius = '10px';
-  container2.style.marginLeft = '100px';
+  imageElement.style.borderRadius = '10px';
 
   const title = document.createElement('h1');
-    title.textContent = data.title;
+  title.textContent = data.title;
 
+  const text = document.createElement('p');
+  text.classList.add('text');
+  text.textContent = data.subtitle.substring(0, 80); // Show the first 80 characters of the subtitle
 
-  const subtitle = document.createElement('p');
-  subtitle.textContent = data.subtitle;
+  const fullText = document.createElement('p');
+  fullText.classList.add('subtitle');
+  fullText.style.display = 'none';
+  fullText.textContent = data.subtitle; // Full subtitle
+
   const button = document.createElement('button');
-    button.textContent = "Read More"
-    button.style.padding = '10px 20px';
+  button.textContent = 'Read More';
+  button.classList.add('btn11');
+
+  button.addEventListener('click', () => {
+    if (fullText.style.display === 'none') {
+      cardee.style.height = 'auto';
+      text.style.display = 'none';
+      fullText.style.display = 'block';
+      button.textContent = 'Read Less';
+    } else {
+      text.style.display = 'block';
+      fullText.style.display = 'none';
+      button.textContent = 'Read More';
+      ardee.style.height = 'auto';
+    }
+  });
+
   card.appendChild(imageElement);
   card.appendChild(title);
-    card.appendChild(subtitle);
-    card.appendChild(button);
-   card.style.textAlign = 'start';
-
-  container3.appendChild(card);
+  card.appendChild(text);
+  card.appendChild(fullText);
+  card.appendChild(button);
+  container33.appendChild(card);
 });
-
 
 const cardData4 = [
   {
@@ -253,16 +273,26 @@ document.addEventListener("DOMContentLoaded", function () {
   }, observerOptions);
 
   // Target all cards
-  var cards = document.querySelectorAll('.card,.carde');
+  var cards = document.querySelectorAll('.card');
 
   cards.forEach((card, index) => {
     card.style.opacity = 0;
     card.style.transform = 'translateY(100%)'; // Start from the bottom
     setTimeout(() => {
       observer.observe(card);
-    }, 900 * index); // 2-second delay between cards
+    }, 800 * index); // 2-second delay between cards
   });
+  
+
+
+
 });
+
+
+
+
+
+
 
 
 let mybutton = document.getElementById("myBtn");
@@ -281,7 +311,39 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+// button11 = document.querySelector('.btn11');
+// cardee=document.querySelector('.carde');
+// button11.addEventListener('click', function () {
+//   cardee.style.height = '600px';
+//   button11.style.display = 'none';
 
+
+// });
+
+
+
+const cardee = document.querySelector('.carde');
+const shortText = document.querySelector('.short-text');
+const fullText = document.querySelector('.full-text');
+const readMoreButton = document.querySelector('.btn11');
+
+let isFullTextVisible = false;
+
+function toggleText() {
+  if (!isFullTextVisible) {
+    shortText.style.display = 'none';
+    fullText.style.display = 'block';
+    readMoreButton.textContent = 'Read Less';
+    cardee.style.height = 'auto'; // Adjust the height as needed
+  } else {
+    shortText.style.display = 'block';
+    fullText.style.display = 'none';
+    readMoreButton.textContent = 'Read More';
+    cardee.style.height = 'auto'; // Reset the height when showing less text
+  }
+
+  isFullTextVisible = !isFullTextVisible;
+}
 
 
 

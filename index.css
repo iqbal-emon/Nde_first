@@ -164,11 +164,12 @@
     text-align: center;
     margin-bottom: 20px;
     margin-left: 80px;
+    line-height: 1;
 }
 
 .special1 {
     margin-left: 30px;
-    height: 430px;
+    height: 380px;
     width: 300px;
 
 }
@@ -194,9 +195,25 @@
     text-align: center;
     color: white;
     margin-left: 80px;
-
+    position: relative;
+    transition: 0.2s;
 }
 
+.feature1::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.feature1:hover::before {
+    opacity: 1;
+}
 
 
 .features {
@@ -218,7 +235,30 @@
     height: 200px;
     text-align: center;
     color: white;
+    position: relative;
 }
+
+.feature2::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+
+
+}
+
+.feature2:hover:before {
+    opacity: 1;
+}
+
+
+
+
 
 .feature3 {
     margin-left: 20px;
@@ -229,8 +269,32 @@
     height: 200px;
     text-align: center;
     color: white;
+    position: relative;
 
 }
+
+.feature3::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+
+
+}
+
+.feature3:hover:before {
+    opacity: 1;
+}
+
+
+
+
+
 
 .feature4 {
     margin-left: 20px;
@@ -241,7 +305,26 @@
     height: 200px;
     text-align: center;
     color: white;
+    position: relative;
 
+}
+
+.feature4::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+
+
+}
+
+.feature4:hover:before {
+    opacity: 1;
 }
 
 .features {
@@ -577,4 +660,17 @@ a:hover {
 #monospace {
     font-family: Monospace;
     margin-bottom: 30px;
+}
+
+.btn11 {
+    height: 40px;
+    width: 80px;
+    border: 1px solid black;
+    background-color: transparent;
+
+}
+
+.btn11 {
+    background-color: transparent;
+    height: 40px;
 }
