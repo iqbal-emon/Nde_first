@@ -67,12 +67,12 @@ const cardContainer = document.getElementById('container');
 cardData.forEach(data => {
   const card = document.createElement('div');
   card.classList.add('card');
- 
 const imageElement = document.createElement('img');
 
     imageElement.src = data.backgroundImage;
   imageElement.height = 200;
-    imageElement.width = 300;
+  imageElement.width = 300;
+  imageElement.style.borderRadius = '10px';
 cardContainer.style.marginLeft = '100px';    
   const title = document.createElement('h2');
   title.textContent = data.title;
@@ -118,7 +118,7 @@ cardData2.forEach(data => {
   imageElement.src = data.backgroundImage;
   imageElement.height = 200;
   imageElement.width = 300;
-
+imageElement.style.borderRadius = '10px';
   container2.style.marginLeft = '100px';
 
   const title = document.createElement('h2');
@@ -151,24 +151,19 @@ const cardData3 = [
     backgroundImage: './image/card/tshirt.jpg',
     title: 'Men Casual Shirt',
    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque' 
-  },
-  {
-    backgroundImage: './image/card/shoe2.jpg',
-    title: 'Beg',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
   }
 ];
 
 cardData3.forEach(data => {
     const card = document.createElement('div');
-    card.classList.add('card');
+    card.classList.add('carde');
     
 
   const imageElement = document.createElement('img');
   imageElement.src = data.backgroundImage;
-  imageElement.height = 200;
-  imageElement.width = 300;
-
+  imageElement.height = 300;
+  imageElement.width = 400;
+imageElement.style.borderRadius = '10px';
   container2.style.marginLeft = '100px';
 
   const title = document.createElement('h1');
@@ -221,7 +216,7 @@ cardData4.forEach(data => {
   card.classList.add('card');
  
 const imageElement = document.createElement('img');
-
+imageElement.style.borderRadius = '10px';
     imageElement.src = data.backgroundImage;
   imageElement.height = 200;
     imageElement.width = 300;
@@ -258,16 +253,33 @@ document.addEventListener("DOMContentLoaded", function () {
   }, observerOptions);
 
   // Target all cards
-  var cards = document.querySelectorAll('.card');
+  var cards = document.querySelectorAll('.card,.carde');
 
   cards.forEach((card, index) => {
     card.style.opacity = 0;
     card.style.transform = 'translateY(100%)'; // Start from the bottom
     setTimeout(() => {
       observer.observe(card);
-    }, 600 * index); // 2-second delay between cards
+    }, 900 * index); // 2-second delay between cards
   });
 });
+
+
+let mybutton = document.getElementById("myBtn");
+window.onscroll = function () { scrollFunction() };
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 
 

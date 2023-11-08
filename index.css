@@ -51,6 +51,7 @@
 .ambition {
     margin-left: 600px;
     color: gray;
+    font-size: larger;
 }
 
 .style1 {
@@ -128,6 +129,7 @@
     opacity: 0.8;
     font-weight: bold;
     font-size: large;
+    color: white;
 }
 
 .box2 {
@@ -151,18 +153,23 @@
 }
 
 .img3 {
-    height: 250px;
-    width: 25s0px;
+    height: 200px;
+    width: 290px;
+
 }
 
 .special {
     display: flex;
     margin-top: 20px;
     text-align: center;
+    margin-bottom: 20px;
+    margin-left: 80px;
 }
 
 .special1 {
     margin-left: 30px;
+    height: 430px;
+    width: 300px;
 
 }
 
@@ -186,12 +193,15 @@
     width: 400px;
     text-align: center;
     color: white;
-
+    margin-left: 80px;
 
 }
 
+
+
 .features {
     display: flex;
+
 }
 
 .features2 {
@@ -204,7 +214,7 @@
     background-image: url('./image/card2/two.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 500px;
+    width: 412px;
     height: 200px;
     text-align: center;
     color: white;
@@ -215,7 +225,7 @@
     background-image: url('./image/card2/third.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 500px;
+    width: 412px;
     height: 200px;
     text-align: center;
     color: white;
@@ -227,7 +237,7 @@
     background-image: url('./image/card2/one (1).jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 1020px;
+    width: 845px;
     height: 200px;
     text-align: center;
     color: white;
@@ -259,17 +269,41 @@
 
     display: inline-block;
     width: 300px;
-    height: 200px;
+    height: 300px;
     margin: 10px;
+    /* border: 2px solid black; */
 
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
+
 }
 
 .card:hover {
-    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+    border-radius: 10px;
+    background-color: white;
+
 }
+
+/* #container2 {
+    border: 3px solid black;
+} */
+
+/* .card:hover {
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+} */
+
+.special1:hover {
+    box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
 
 h2 {
     font-size: 18px;
@@ -296,7 +330,7 @@ footer {
     margin-top: 20px;
     background-color: black;
     width: auto;
-    height: 150px;
+    height: full;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -351,7 +385,7 @@ a:hover {
 .word-animation {
     font-size: 40px;
     text-align: center;
-
+    font-family: Cursive;
 }
 
 .word-animation span {
@@ -466,4 +500,81 @@ a:hover {
 .style4 {
     animation: showCard4 2s ease-in forwards;
     animation-delay: 3s;
+}
+
+.img3 {
+    border-radius: 10px;
+}
+
+#po {
+    padding-top: 45%;
+
+    font-weight: bold;
+}
+
+#po1,
+#po2 {
+    padding-top: 15%;
+}
+
+.btn6 {
+    padding: 10px;
+    border-color: white;
+    color: white;
+}
+
+#po3 {
+    padding-top: 100px;
+}
+
+.carde {
+
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    /* border: 2px solid black; */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    /* padding-left: 2px; */
+
+    background: rgb(85, 183, 197);
+    color: white;
+}
+
+.carde:hover {
+    box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    transition: 0.1s;
+    /* border-radius: 10px; */
+
+
+
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* z-index: 99; */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 20px;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.allpro {
+    color: white;
+}
+
+#monospace {
+    font-family: Monospace;
+    margin-bottom: 30px;
 }
