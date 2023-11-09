@@ -1,8 +1,14 @@
 .navbar {
     display: flex;
-    background: white;
-    /* justify-content: center; */
-    padding-top: 13px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px 30px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 
 
 }
@@ -724,7 +730,7 @@ a:hover {
 
 
 .dropdown-content {
-    margin-left: 80px;
+    /* margin-left: 20px; */
     display: none;
     position: absolute;
 
