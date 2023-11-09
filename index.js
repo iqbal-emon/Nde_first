@@ -111,27 +111,23 @@ cardContainer.style.marginLeft = '100px';
   function showCartDetails() {
     const cartItem2 = document.createElement('div');
     cartItem2.classList.add('div2');
-  dropdownContent.innerHTML = ''; // Clear the previous content
+  dropdownContent.innerHTML = ''; 
    var total = 0;
   cartAdd.forEach(item => {
-    // Create a new element for each item
+  
     const cartItem = document.createElement('div');
     cartItem.classList.add('div1');
     cartItem.textContent = item.name + "=" + item.price;
     var hr = document.createElement('hr');
 
-// Set any styles if needed
-hr.style.border = '1px solid #ccc';
-// hr.style.margin = '10px 0';
 
-// Insert the 'hr' element into the DOM
-// For example, let's say you want to insert it at the end of the body
+hr.style.border = '1px solid #ccc';
+
 dropdownContent.appendChild(hr);
 
-// If you want to insert the 'hr' element after a specific element, you can use:
-// document.getElementById('someElementId').appendChild(hr);
+
     total = total + parseFloat(item.price);
-    // console.log(total);
+   
     dropdownContent.appendChild(cartItem);
   });
 
@@ -252,12 +248,12 @@ cardData3.forEach(data => {
 
   const text = document.createElement('p');
   text.classList.add('text');
-  text.textContent = data.subtitle.substring(0, 80); // Show the first 80 characters of the subtitle
+  text.textContent = data.subtitle.substring(0, 80); 
 
   const fullText = document.createElement('p');
   fullText.classList.add('subtitle');
   fullText.style.display = 'none';
-  fullText.textContent = data.subtitle; // Full subtitle
+  fullText.textContent = data.subtitle; 
 
   const button = document.createElement('button');
   button.textContent = 'Read More';
@@ -344,25 +340,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      // If entry (card) is visible
+
       if (entry.isIntersecting) {
         entry.target.style.transition = 'opacity 1s, transform 1s';
         entry.target.style.opacity = 1;
         entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target); // Stop observing after animation
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Target all cards
+ 
   var cards = document.querySelectorAll('.card');
 
   cards.forEach((card, index) => {
     card.style.opacity = 0;
-    card.style.transform = 'translateY(100%)'; // Start from the bottom
+    card.style.transform = 'translateY(100%)'; 
     setTimeout(() => {
       observer.observe(card);
-    }, 800 * index); // 2-second delay between cards
+    }, 800 * index); 
   });
   
 
@@ -387,20 +383,12 @@ function scrollFunction() {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
+
 function topFunction() {
 
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  document.documentElement.scrollTop = 0; 
 }
 
-// button11 = document.querySelector('.btn11');
-// cardee=document.querySelector('.carde');
-// button11.addEventListener('click', function () {
-//   cardee.style.height = '600px';
-//   button11.style.display = 'none';
-
-
-// });
 
 
 
@@ -416,18 +404,18 @@ function toggleText() {
     shortText.style.display = 'none';
     fullText.style.display = 'block';
     readMoreButton.textContent = 'Read Less';
-    cardee.style.height = 'auto'; // Adjust the height as needed
+    cardee.style.height = 'auto'; 
   } else {
     shortText.style.display = 'block';
     fullText.style.display = 'none';
     readMoreButton.textContent = 'Read More';
-    cardee.style.height = 'auto'; // Reset the height when showing less text
+    cardee.style.height = 'auto'; 
   }
 
   isFullTextVisible = !isFullTextVisible;
 }
 
-// const btn13 = document.querySelector('.btn12');
+
 
 
 
