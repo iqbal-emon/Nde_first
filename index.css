@@ -737,6 +737,8 @@ a:hover {
     background-color: white;
     width: 220px;
     z-index: 2;
+    max-height: 500px;
+    overflow-y: auto;
 
 }
 
@@ -807,3 +809,11 @@ a:hover {
     z-index: 1;
     box-shadow: 5px 10px black;
 }
+
+::-webkit-scrollbar {
+    height: 12px;
+}
+
+/* ::-webkit-scrollbar-track {
+    background-color: #4CAF50;
+} */
