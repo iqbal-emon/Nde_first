@@ -106,16 +106,39 @@ cardContainer.style.marginLeft = '100px';
      cartAdd.push(data);
      showCartDetails();
    
-  });
- function showCartDetails() {
+   });
+  
+  function showCartDetails() {
+    const cartItem2 = document.createElement('div');
+    cartItem2.classList.add('div2');
   dropdownContent.innerHTML = ''; // Clear the previous content
-
+   var total = 0;
   cartAdd.forEach(item => {
     // Create a new element for each item
     const cartItem = document.createElement('div');
+    cartItem.classList.add('div1');
     cartItem.textContent = item.name + "=" + item.price;
+    var hr = document.createElement('hr');
+
+// Set any styles if needed
+hr.style.border = '1px solid #ccc';
+// hr.style.margin = '10px 0';
+
+// Insert the 'hr' element into the DOM
+// For example, let's say you want to insert it at the end of the body
+dropdownContent.appendChild(hr);
+
+// If you want to insert the 'hr' element after a specific element, you can use:
+// document.getElementById('someElementId').appendChild(hr);
+    total = total + parseFloat(item.price);
+    // console.log(total);
     dropdownContent.appendChild(cartItem);
   });
+
+    
+
+    cartItem2.textContent = "Total Amount=" + total+"$";
+    dropdownContent.appendChild(cartItem2);
 }
 
 
