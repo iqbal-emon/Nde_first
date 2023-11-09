@@ -1,66 +1,85 @@
 const cardData = [
   {
     backgroundImage: './image/card/shoe1.jpg',
-    title: 'Men Casual Shoe',
-    subtitle: '3000$'
+    name: 'Men first shirt',
+    price:'3000$'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
+    name: 'Men second shirt',
+    price:'3000$'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
+    name: 'Men third shirt',
+    price:'3000$'
     },
     {
        backgroundImage: './image/card/shoe2.jpg',
-    title: 'Beg',
-    subtitle: '2000$'
+    name: 'Men fourth shirt',
+    price:'3000$'
     },
      {
     backgroundImage: './image/card/shoe1.jpg',
-    title: 'Men Casual Shoe',
-    subtitle: '3000$'
+   name: 'Men fifth shirt',
+    price:'3000$'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
+    name: 'Men sixth shirt',
+    price:'3000$'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
+    name: 'Men seventh  shirt',
+    price:'3000$'
     },
     {
        backgroundImage: './image/card/shoe2.jpg',
-    title: 'Beg',
-    subtitle: '2000$'
+    name: 'Men eighten shirt',
+    price:'3000$'
     },
      {
     backgroundImage: './image/card/shoe1.jpg',
-    title: 'Men Casual Shoe',
-    subtitle: '3000$'
+    name: 'Men fourthlast shirt',
+    price:'3000$'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
+    name: 'Men thirdlast shirt',
+    price:'3000$'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
+    name: 'Men secondlast shirt',
+    price:'3000$'
     },
     {
        backgroundImage: './image/card/shoe2.jpg',
-    title: 'Beg',
-    subtitle: '2000$'
+    name: 'Men last shirt',
+    price:'3000$'
   }
   
 ];
+
+const cartb = document.getElementById('cartbutton');
+const dropdownBtn = document.getElementById('dropdownBtn');
+const dropdownContent = document.getElementById('myDropdown');
+cartb.addEventListener('click', () => {
+   if (dropdownContent.style.display === 'block') {
+    dropdownContent.style.display = 'none';
+  } else {
+    dropdownContent.style.display = 'block';
+  }
+
+});
+
+
+
+
+
+var cartAdd = [];
+// var cartItem = {};
 
 const cardContainer = document.getElementById('container');
 
@@ -75,17 +94,54 @@ const imageElement = document.createElement('img');
   imageElement.style.borderRadius = '10px';
 cardContainer.style.marginLeft = '100px';    
   const title = document.createElement('h2');
-  title.textContent = data.title;
+  
+  title.textContent = data.name;
 
   const subtitle = document.createElement('h2');
-  subtitle.textContent = data.subtitle;
-  
+  subtitle.textContent = data.price;
+   const btn12 = document.createElement('button');
+    btn12.classList.add('btn12');
+  btn12.textContent = 'add to cart';
+   btn12.addEventListener('click', () => {
+     cartAdd.push(data);
+     showCartDetails();
+   
+  });
+ function showCartDetails() {
+  dropdownContent.innerHTML = ''; // Clear the previous content
+
+  cartAdd.forEach(item => {
+    // Create a new element for each item
+    const cartItem = document.createElement('div');
+    cartItem.textContent = item.name + "=" + item.price;
+    dropdownContent.appendChild(cartItem);
+  });
+}
+
+
+
+
+
+
+
+
   card.appendChild(imageElement);
   card.appendChild(title);
   card.appendChild(subtitle);
+  card.appendChild(btn12);
     cardContainer.appendChild(card);
   
 });
+
+
+
+
+
+
+
+
+
+
 const container2 = document.getElementById('container2');
 const cardData2 = [
   {
@@ -120,7 +176,7 @@ cardData2.forEach(data => {
   imageElement.width = 300;
 imageElement.style.borderRadius = '10px';
   container2.style.marginLeft = '100px';
-
+ 
   const title = document.createElement('h2');
   title.textContent = data.title;
 
@@ -128,7 +184,9 @@ imageElement.style.borderRadius = '10px';
   subtitle.textContent = data.subtitle;
 
   card.appendChild(imageElement);
+  
   card.appendChild(title);
+
   card.appendChild(subtitle);
   container2.appendChild(card);
 });
@@ -139,19 +197,18 @@ const container3 = document.getElementById('container3');
 const cardData3 = [
   {
     backgroundImage: './image/card/shoe1.jpg',
-    title: 'Men Casual Shoe',
-     title: 'Men Casual Shirt',
-        subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
+     title: 'Men first Shirt',
+        subtitle: '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
+    title: 'Men second Shirt',
+     subtitle: '2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-   subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque' 
+    title: 'last Casual Shirt',
+   subtitle: '3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque' 
   }
 ];
 
@@ -242,11 +299,13 @@ imageElement.style.borderRadius = '10px';
     imageElement.width = 300;
 cardContainer4.style.marginLeft = '100px';    
   const title = document.createElement('h2');
+  title.classList.add('title1');
+
   title.textContent = data.title;
 
   const subtitle = document.createElement('h2');
   subtitle.textContent = data.subtitle;
-  
+  subtitle.classList.add('subtitle1');
   card.appendChild(imageElement);
   card.appendChild(title);
   card.appendChild(subtitle);
@@ -344,6 +403,14 @@ function toggleText() {
 
   isFullTextVisible = !isFullTextVisible;
 }
+
+// const btn13 = document.querySelector('.btn12');
+
+
+
+
+
+
 
 
 

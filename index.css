@@ -352,7 +352,7 @@
 
     display: inline-block;
     width: 300px;
-    height: 300px;
+    height: 330px;
     margin: 10px;
     /* border: 2px solid black; */
 
@@ -673,4 +673,72 @@ a:hover {
 .btn11 {
     background-color: transparent;
     height: 40px;
+}
+
+#card5 {
+    position: relative;
+}
+
+#card5::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#card5:hover::before {
+    opacity: 1;
+}
+
+.btn3,
+.btn4,
+.btn5 {
+
+    color: white;
+    border: 1px solid white;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown {
+
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    cursor: pointer;
+    padding: 14px 16px;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min: width 220px;
+    z-index: 1;
+}
+
+
+
+/* Show the dropdown menu when the dropdown is hovered over */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#myDropdown {
+    background-color: white;
+    box-shadow: 5px 5px 10px black;
+    padding: 10px;
+    border-radius: 10px;
 }
