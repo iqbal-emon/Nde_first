@@ -361,6 +361,7 @@
     height: 330px;
     margin: 10px;
     /* border: 2px solid black; */
+    /* display: block; */
 
     background-size: cover;
     background-repeat: no-repeat;
@@ -817,3 +818,30 @@ a:hover {
 /* ::-webkit-scrollbar-track {
     background-color: #4CAF50;
 } */
+#searchResults {
+    margin-top: 25px;
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    /* Background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Box shadow for a subtle lift */
+    max-height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    /* Set a maximum height for the dropdown */
+    overflow-y: auto;
+    /* Enable vertical scroll if content exceeds the max height */
+    border: 1px solid #ccc;
+    /* Border color */
+}
+
+#searchResults div {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#searchResults div:hover {
+    background-color: #f1f1f1;
+    /* Highlight color on hover */
+}

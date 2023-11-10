@@ -24,7 +24,8 @@
             <div class="navbar3">
 
                 <!-- <img class="images" src="./image/login.png" alt="" width="22" height="22"> -->
-                <input type="text" id="ipt" style="margin-left: 10px ;border:2px solid black; border-radius: 10px; ">
+                <input onkeyup="filterNames()" type="text" id="searchInput"
+                    style="margin-left: 10px ;border:2px solid black; border-radius: 10px; ">
                 <!-- <img class="images" src=" ./image/search.png" alt="" width="22" height="22"> -->
                 <!-- <div class="dropdown2">
                     <img class="images" src=" ./image/search.png" alt="" width="22" height="22">
@@ -33,6 +34,7 @@
                         <input type="text" id="ipt">
                     </div>
                 </div> -->
+                <div id="searchResults"></div>
 
 
 

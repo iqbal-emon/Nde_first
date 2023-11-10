@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (entry.isIntersecting) {
         entry.target.style.transition = 'opacity 1s, transform 1s';
         entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.style.transform = 'translateX(0)';
         observer.unobserve(entry.target);
       }
     });
@@ -355,10 +355,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   cards.forEach((card, index) => {
     card.style.opacity = 0;
-    card.style.transform = 'translateY(100%)'; 
+    card.style.transform = 'translateX(90%)'; 
     setTimeout(() => {
       observer.observe(card);
-    }, 800 * index); 
+    }, 1000 * index); 
   });
   
 
@@ -404,7 +404,7 @@ function toggleText() {
     shortText.style.display = 'none';
     fullText.style.display = 'block';
     readMoreButton.textContent = 'Read Less';
-    cardee.style.height = 'auto'; 
+    cardee.style.height = 'auto'; // Adjust the height as needed
   } else {
     shortText.style.display = 'block';
     fullText.style.display = 'none';
@@ -415,10 +415,98 @@ function toggleText() {
   isFullTextVisible = !isFullTextVisible;
 }
 
+// const names = [
+//   { id: 1, name: 'Example Name' },
+//   // ... other names
+// ];
 
+// function filterNames() {
+//   const input = document.getElementById('searchInput');
+//   const filter = input.value.toUpperCase();
+//   const resultsContainer = document.getElementById('searchResults');
+  
+//   // Clear previous results
+//   resultsContainer.innerHTML = '';
 
+//   // Filter the names
+//   const filteredNames = names.filter(item => item.name.toUpperCase().includes(filter));
 
+//   // Show the matching results
+//   filteredNames.forEach(item => {
+//     const resultItem = document.createElement('div');
+//     resultItem.innerText = item.name;
+//     resultItem.onclick = function() {
+//       showCard(item.name);
+//     };
+//     resultsContainer.appendChild(resultItem);
+//   });
+// }
 
+// function showCard(name) {
+//   const cards = document.querySelectorAll('.card');
+//   cards.forEach(card => {
+//     if (card.dataset.name === name) {
+//       card.classList.add('active');
+//     } else {
+//       card.classList.remove('active');
+//     }
+//   });
+// }
+ function filterNames() {
+      const input = document.getElementById('searchInput');
+      const filter = input.value.toUpperCase();
+      const resultsContainer = document.getElementById('searchResults');
+
+      // Clear previous results
+      resultsContainer.innerHTML = '';
+
+      // Filter the names
+      const filteredNames = cardData.filter(item => item.name.toUpperCase().includes(filter));
+
+      // Show the matching results
+      filteredNames.forEach(item => {
+        const resultItem = document.createElement('div');
+        resultItem.innerText = item.name;
+        resultItem.onclick = function () {
+          showAndScrollToCard(item.name);
+        };
+        resultsContainer.appendChild(resultItem);
+      });
+    }
+
+  function showAndScrollToCard(name) {
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach((card, index) => {
+    // Assuming each card in the HTML corresponds to an item in cardData
+    const cardInfo = cardData[index];
+
+    if (cardInfo.name === name) {
+      // Scroll to the clicked card within the parent container
+      card.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'start',
+      });
+    }
+  });
+}
+// // Get all search result elements
+// const searchResults = document.querySelectorAll('.card');
+
+// // Loop through each search result and add a click event listener
+// searchResults.forEach(function(result) {
+//   result.addEventListener('click', function() {
+//     // Get the target card ID from the data attribute
+//     const targetCardID = this.dataset.targetCard;
+
+//     // Find the corresponding card using the ID
+//     const targetCard = document.getElementById(targetCardID);
+
+//     // Scroll the card into view
+//     targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+//   });
+// });
 
 
 
