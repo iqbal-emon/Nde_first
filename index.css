@@ -9,6 +9,7 @@
     background-color: #f8f8f8;
     padding: 10px 30px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    height: 30px;
 
 
 }
@@ -516,7 +517,7 @@ a:hover {
 
 
 
-.style1,
+/* .style1,
 .style2,
 .style3,
 .style4 {
@@ -547,9 +548,9 @@ a:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}
+} */
 
-@keyframes showCard3 {
+/* @keyframes showCard3 {
     0% {
         opacity: 0;
         transform: translateY(1em);
@@ -591,7 +592,7 @@ a:hover {
 .style4 {
     animation: showCard4 2s ease-in forwards;
     animation-delay: 3s;
-}
+} */
 
 .img3 {
     border-radius: 10px;
@@ -844,4 +845,8 @@ a:hover {
 #searchResults div:hover {
     background-color: #f1f1f1;
     /* Highlight color on hover */
+}
+
+#ca {
+    margin-left: 18px;
 }

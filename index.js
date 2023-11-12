@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   cards.forEach((card, index) => {
     card.style.opacity = 0;
-    card.style.transform = 'translateX(90%)'; 
+    card.style.transform = 'translateX(60%)'; 
     setTimeout(() => {
       observer.observe(card);
     }, 1000 * index); 
@@ -457,14 +457,15 @@ function toggleText() {
       const filter = input.value.toUpperCase();
       const resultsContainer = document.getElementById('searchResults');
 
-      // Clear previous results
-      resultsContainer.innerHTML = '';
+   
+   if(input===null)
+      searchResults.style.display = 'none';
 
-      // Filter the names
+     
       const filteredNames = cardData.filter(item => item.name.toUpperCase().includes(filter));
 
-      // Show the matching results
-      filteredNames.forEach(item => {
+   filteredNames.forEach(item => {
+     
         const resultItem = document.createElement('div');
         resultItem.innerText = item.name;
         resultItem.onclick = function () {
@@ -474,40 +475,179 @@ function toggleText() {
       });
     }
 
-  function showAndScrollToCard(name) {
+function showAndScrollToCard(name) {
+     var searchResults = document.getElementById('searchResults');
+    searchResults.innerHTML = '';   
   const cards = document.querySelectorAll('.card');
 
   cards.forEach((card, index) => {
-    // Assuming each card in the HTML corresponds to an item in cardData
+    
     const cardInfo = cardData[index];
 
     if (cardInfo.name === name) {
-      // Scroll to the clicked card within the parent container
+      
       card.scrollIntoView({
         behavior: 'smooth',
-        block: 'start',
+        
         inline: 'start',
       });
     }
   });
+   
+   
 }
-// // Get all search result elements
-// const searchResults = document.querySelectorAll('.card');
 
-// // Loop through each search result and add a click event listener
-// searchResults.forEach(function(result) {
-//   result.addEventListener('click', function() {
-//     // Get the target card ID from the data attribute
-//     const targetCardID = this.dataset.targetCard;
 
-//     // Find the corresponding card using the ID
-//     const targetCard = document.getElementById(targetCardID);
+document.addEventListener("DOMContentLoaded", function () {
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  };
 
-//     // Scroll the card into view
-//     targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-//   });
-// });
+  var observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
 
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'opacity 1s, transform 1s';
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateX(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // var cards = document.querySelectorAll('.card');
+const special1 = document.querySelectorAll("#card5");
+// console.log(special1);
+
+special1.forEach((card, index) => {
+  console.log(`Applying styles to card ${index + 1}`);
+  card.style.opacity = 0;
+  card.style.transform = 'translateX(60%)';
+
+  setTimeout(() => {
+    observer.observe(card);
+  }, 900 * index);
+});
+
+
+
+
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  };
+
+  var observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'opacity 1s, transform 1s';
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateX(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // var cards = document.querySelectorAll('.card');
+const special1 = document.querySelectorAll(".special1");
+// console.log(special1);
+
+special1.forEach((card, index) => {
+  console.log(`Applying styles to card ${index + 1}`);
+  card.style.opacity = 0;
+  card.style.transform = 'translateX(60%)';
+
+  setTimeout(() => {
+    observer.observe(card);
+  }, 900 * index);
+});
+
+
+
+
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  };
+
+  var observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'opacity 1s, transform 1s';
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateX(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+const special1 = document.querySelectorAll("#fea1");
+
+
+special1.forEach((card, index) => {
+  console.log(`Applying styles to card ${index + 1}`);
+  card.style.opacity = 0;
+  card.style.transform = 'translateX(60%)';
+
+  setTimeout(() => {
+    observer.observe(card);
+  }, 900 * index);
+});
+
+
+
+
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+  };
+
+  var observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'opacity 1s, transform 1s';
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateX(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // var cards = document.querySelectorAll('.card');
+const special1 = document.querySelectorAll(".carde");
+// console.log(special1);
+
+special1.forEach((card, index) => {
+  console.log(`Applying styles to card ${index + 1}`);
+  card.style.opacity = 0;
+  card.style.transform = 'translateX(60%)';
+
+  setTimeout(() => {
+    observer.observe(card);
+  }, 900 * index);
+});
+
+
+
+
+});
 
 
 
