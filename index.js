@@ -452,22 +452,27 @@ function toggleText() {
 //     }
 //   });
 // }
- function filterNames() {
-      const input = document.getElementById('searchInput');
-      const filter = input.value.toUpperCase();
-      const resultsContainer = document.getElementById('searchResults');
-
-   
-   if(input===null)
-      searchResults.style.display = 'none';
-
-     
+function filterNames() {
+  const input = document.getElementById('searchInput');
+  const filter = input.value.toUpperCase();
+   const resultsContainer = document.getElementById('searchResults');
+      if (filter === '') {
+        resultsContainer.innerHTML = '';  // Clear the results container
+        return;
+    }
+      
+      
       const filteredNames = cardData.filter(item => item.name.toUpperCase().includes(filter));
-
+      
+      resultsContainer.innerHTML = '';
    filteredNames.forEach(item => {
+    
      
         const resultItem = document.createElement('div');
-        resultItem.innerText = item.name;
+     resultItem.innerText = item.name;
+    //  if (input == null) {
+    //     resultsContainer.innerHTML='';
+    //  }
         resultItem.onclick = function () {
           showAndScrollToCard(item.name);
         };
@@ -475,21 +480,25 @@ function toggleText() {
       });
     }
 
-function showAndScrollToCard(name) {
+function showAndScrollToCard(name2) {
      var searchResults = document.getElementById('searchResults');
-    searchResults.innerHTML = '';   
+      
   const cards = document.querySelectorAll('.card');
-
+const input = document.getElementById('searchInput');
+  const filter = input.value.toUpperCase();
+  searchResults.innerHTML = ''; 
+  // filter.innerHTML = '';
+  // input = name2;
   cards.forEach((card, index) => {
     
     const cardInfo = cardData[index];
-
-    if (cardInfo.name === name) {
+    console.log(cardInfo.name);
+    console.log("The name is " + name2);
+    if (cardInfo.name ==name2) {
       
       card.scrollIntoView({
-        behavior: 'smooth',
-        
-        inline: 'start',
+      //  behavior: 'smooth', block: 'nearest', inline: 'start',
+    
       });
     }
   });
