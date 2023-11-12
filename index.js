@@ -131,9 +131,34 @@ dropdownContent.appendChild(hr);
     dropdownContent.appendChild(cartItem);
   });
 
-    
+  var button = document.createElement('button');
+  button.classList.add('your-button-class'); 
+  button.textContent = 'Payment';
+  cartItem2.textContent = "Total Amount=" + total + "$";
+  button.addEventListener('click', function() {
+// Your action or function to be executed when the button is clicked
+    // alert('Button clicked!');
+    window.open('payment.html?total=' + total, '_blank');
+console.log(total);
 
-    cartItem2.textContent = "Total Amount=" + total+"$";
+// Retrieve total from the URL parameters
+var urlParams = new URLSearchParams(window.location.search);
+var totalFromUrl = urlParams.get('total');
+console.log(totalFromUrl);
+
+var Amount = document.getElementById('amount');
+if (Amount) {
+  // Set the total value in the 'Amount' element
+  Amount.innerHTML = totalFromUrl;
+} else {
+  console.error("Element with id 'amount' not found.");
+}
+    
+});
+
+// Append the button to the dropdownContent
+dropdownContent.appendChild(button);
+    
     dropdownContent.appendChild(cartItem2);
 }
 

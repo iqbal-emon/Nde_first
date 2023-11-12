@@ -850,3 +850,12 @@ a:hover {
 #ca {
     margin-left: 18px;
 }
+
+.your-button-class {
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    background-color: red;
+    border-radius: 10px;
+
+}

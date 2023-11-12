@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./payment.css">
+</head>
+
+
+<form id="payment-form">
+    <div id="card-element" style="padding-left: 300px;">
+        <h1 style="color: white;">Payment Using</h1>
+        <!-- <label for="card-element">Credit or Debit Card</label> -->
+        <p>Card Number:</p>
+        <input type="number" style="border-radius: 10px;">
+    </div>
+
+
+
+    <div class="cardnumber">
+
+        <div>
+
+            <p>Expiration</p>
+            <input type="date" style=" width: 150px; border-radius: 10px;">
+
+        </div>
+
+        <div style="padding-left: 20px;">
+
+            <p>CVC</p>
+            <input type="text" style=" border-radius: 10px;">
+        </div>
+
+    </div>
+
+
+
+
+    <!-- A Stripe Element will be inserted here. -->
+    </div>
+
+    <!-- Used to display form errors. -->
+    <div id="amount"></div>
+
+    <button id="subb" type="submit" style="margin-left: 300px">Submit Payment</button>
+</form>
+
+<script src="./index.js">
+</script>
+
+</body>
+
+</html>

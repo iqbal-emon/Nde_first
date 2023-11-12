@@ -1,0 +1,34 @@
+#payment-form {
+
+    background-color: cadetblue;
+
+    width: 800px;
+    margin-left: 300px;
+    margin-top: 200px;
+    box-shadow: 10px;
+    height: 400px;
+    padding-top: 40px;
+    box-shadow: 3px 3px 5px #888888;
+    border-radius: 10px;
+
+}
+
+.cardnumber {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+
+}
+
+#subb {
+    height: 40px;
+    width: 200px;
+    background-color: red;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#subb:hover {
+    background-color: cornsilk;
+
+}
