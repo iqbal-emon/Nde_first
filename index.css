@@ -62,7 +62,7 @@
 }
 
 .style1 {
-    margin-left: 150px;
+    /* margin-left: 150px; */
     position: relative;
 
 
@@ -194,7 +194,7 @@
 }
 
 .feature1 {
-    background-image: url('./image/card2/fourth.jpg');
+    /* background-image: url('./image/card2/fourth.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     height: 420px;
@@ -235,7 +235,7 @@
 
 .feature2 {
     margin-left: 20px;
-    background-image: url('./image/card2/two.jpg');
+    /* background-image: url('./image/card2/two.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     width: 412px;
@@ -269,7 +269,7 @@
 
 .feature3 {
     margin-left: 20px;
-    background-image: url('./image/card2/third.jpg');
+    /* background-image: url('./image/card2/third.jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     width: 412px;
@@ -305,7 +305,7 @@
 
 .feature4 {
     margin-left: 20px;
-    background-image: url('./image/card2/one (1).jpg');
+    /* background-image: url('./image/card2/one (1).jpg'); */
     background-size: cover;
     background-repeat: no-repeat;
     width: 845px;
@@ -401,7 +401,7 @@ h2 {
 }
 
 .container {
-
+    display: grid;
     margin-left: 100px;
 }
 
@@ -684,8 +684,10 @@ a:hover {
     height: 40px;
 }
 
+
 #card5 {
     position: relative;
+
 }
 
 #card5::before {
@@ -858,4 +860,79 @@ a:hover {
     background-color: red;
     border-radius: 10px;
 
+}
+
+/* .ca {
+    display: block;
+} */
+.second1 {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media screen and (min-width: 2500px) {
+    body {
+        /* background-color: black; */
+
+        .special {
+            margin-left: 580px;
+        }
+
+        .features {
+            margin-left: 500px;
+        }
+
+        #container {
+            width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #container3 {
+            margin-left: 500px;
+        }
+
+        #container4 {
+            margin-left: 500px;
+
+
+        }
+
+        #container2 {
+            margin-left: 50%;
+        }
+
+        #con1 {
+            margin-left: 480px;
+        }
+
+        #con2 {
+            margin-left: 480px;
+        }
+
+        #con3 {
+            margin-left: 480px;
+        }
+
+        footer {
+            width: 2300px;
+            margin-right: 100px;
+
+        }
+
+        .ambition {
+            align-content: center;
+        }
+
+        .navbar {
+            width: 70%;
+        }
+
+        #foooter1 {
+            width: 70%;
+        }
+    }
 }

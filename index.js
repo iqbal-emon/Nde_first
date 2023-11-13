@@ -1,241 +1,3 @@
-const cardData = [
-  {
-    backgroundImage: './image/card/shoe1.jpg',
-    name: 'Men first shirt',
-    price:'3000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men second shirt',
-    price:'3000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men third shirt',
-    price:'3000$'
-    },
-    {
-       backgroundImage: './image/card/shoe2.jpg',
-    name: 'Men fourth shirt',
-    price:'3000$'
-    },
-     {
-    backgroundImage: './image/card/shoe1.jpg',
-   name: 'Men fifth shirt',
-    price:'3000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men sixth shirt',
-    price:'3000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men seventh  shirt',
-    price:'3000$'
-    },
-    {
-       backgroundImage: './image/card/shoe2.jpg',
-    name: 'Men eighten shirt',
-    price:'3000$'
-    },
-     {
-    backgroundImage: './image/card/shoe1.jpg',
-    name: 'Men fourthlast shirt',
-    price:'3000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men thirdlast shirt',
-    price:'3000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men secondlast shirt',
-    price:'3000$'
-    },
-    {
-       backgroundImage: './image/card/shoe2.jpg',
-    name: 'Men last shirt',
-    price:'3000$'
-  }
-  
-];
-
-const cartb = document.getElementById('cartbutton');
-const dropdownBtn = document.getElementById('dropdownBtn');
-const dropdownContent = document.getElementById('myDropdown');
-cartb.addEventListener('click', () => {
-   if (dropdownContent.style.display === 'block') {
-    dropdownContent.style.display = 'none';
-  } else {
-    dropdownContent.style.display = 'block';
-  }
-
-});
-
-
-
-
-
-var cartAdd = [];
-// var cartItem = {};
-
-const cardContainer = document.getElementById('container');
-
-cardData.forEach(data => {
-  const card = document.createElement('div');
-  card.classList.add('card');
-const imageElement = document.createElement('img');
-
-    imageElement.src = data.backgroundImage;
-  imageElement.height = 200;
-  imageElement.width = 300;
-  imageElement.style.borderRadius = '10px';
-cardContainer.style.marginLeft = '100px';    
-  const title = document.createElement('h2');
-  
-  title.textContent = data.name;
-
-  const subtitle = document.createElement('h2');
-  subtitle.textContent = data.price;
-   const btn12 = document.createElement('button');
-    btn12.classList.add('btn12');
-  btn12.textContent = 'add to cart';
-   btn12.addEventListener('click', () => {
-     cartAdd.push(data);
-     showCartDetails();
-   
-   });
-  
-  function showCartDetails() {
-    const cartItem2 = document.createElement('div');
-    cartItem2.classList.add('div2');
-  dropdownContent.innerHTML = ''; 
-   var total = 0;
-  cartAdd.forEach(item => {
-  
-    const cartItem = document.createElement('div');
-    cartItem.classList.add('div1');
-    cartItem.textContent = item.name + "=" + item.price;
-    var hr = document.createElement('hr');
-
-
-hr.style.border = '1px solid #ccc';
-
-dropdownContent.appendChild(hr);
-
-
-    total = total + parseFloat(item.price);
-   
-    dropdownContent.appendChild(cartItem);
-  });
-
-  var button = document.createElement('button');
-  button.classList.add('your-button-class'); 
-  button.textContent = 'Payment';
-  cartItem2.textContent = "Total Amount=" + total + "$";
-  button.addEventListener('click', function() {
-// Your action or function to be executed when the button is clicked
-    // alert('Button clicked!');
-    window.open('payment.html?total=' + total, '_blank');
-console.log(total);
-
-// Retrieve total from the URL parameters
-var urlParams = new URLSearchParams(window.location.search);
-var totalFromUrl = urlParams.get('total');
-console.log(totalFromUrl);
-
-var Amount = document.getElementById('amount');
-if (Amount) {
-  // Set the total value in the 'Amount' element
-  Amount.innerHTML = totalFromUrl;
-} else {
-  console.error("Element with id 'amount' not found.");
-}
-    
-});
-
-// Append the button to the dropdownContent
-dropdownContent.appendChild(button);
-    
-    dropdownContent.appendChild(cartItem2);
-}
-
-
-
-
-
-
-
-
-  card.appendChild(imageElement);
-  card.appendChild(title);
-  card.appendChild(subtitle);
-  card.appendChild(btn12);
-    cardContainer.appendChild(card);
-  
-});
-
-
-
-
-
-
-
-
-
-
-const container2 = document.getElementById('container2');
-const cardData2 = [
-  {
-    backgroundImage: './image/card/shoe1.jpg',
-    title: 'Men Casual Shoe',
-    subtitle: '3000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
-  },
-  {
-    backgroundImage: './image/card/shoe2.jpg',
-    title: 'Beg',
-    subtitle: '2000$'
-  }
-];
-
-cardData2.forEach(data => {
-  const card = document.createElement('div');
-  card.classList.add('card');
-
-  const imageElement = document.createElement('img');
-  imageElement.src = data.backgroundImage;
-  imageElement.height = 200;
-  imageElement.width = 300;
-imageElement.style.borderRadius = '10px';
-  container2.style.marginLeft = '100px';
- 
-  const title = document.createElement('h2');
-  title.textContent = data.title;
-
-  const subtitle = document.createElement('h2');
-  subtitle.textContent = data.subtitle;
-
-  card.appendChild(imageElement);
-  
-  card.appendChild(title);
-
-  card.appendChild(subtitle);
-  container2.appendChild(card);
-});
-
-
 
 const container3 = document.getElementById('container3');
 const cardData3 = [
@@ -306,90 +68,6 @@ cardData3.forEach(data => {
   container33.appendChild(card);
 });
 
-const cardData4 = [
-  {
-    backgroundImage: './image/card/shoe1.jpg',
-    title: 'Men Casual Shoe',
-    subtitle: '3000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
-  },
-  {
-    backgroundImage: './image/card/shoe2.jpg',
-    title: 'Beg',
-    subtitle: '2000$'
-  }
-]
-
-
-const cardContainer4 = document.getElementById('container4');
-
-cardData4.forEach(data => {
-  const card = document.createElement('div');
-  card.classList.add('card');
- 
-const imageElement = document.createElement('img');
-imageElement.style.borderRadius = '10px';
-    imageElement.src = data.backgroundImage;
-  imageElement.height = 200;
-    imageElement.width = 300;
-cardContainer4.style.marginLeft = '100px';    
-  const title = document.createElement('h2');
-  title.classList.add('title1');
-
-  title.textContent = data.title;
-
-  const subtitle = document.createElement('h2');
-  subtitle.textContent = data.subtitle;
-  subtitle.classList.add('subtitle1');
-  card.appendChild(imageElement);
-  card.appendChild(title);
-  card.appendChild(subtitle);
-    cardContainer4.appendChild(card);
-  
-});
-document.addEventListener("DOMContentLoaded", function () {
-  var observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  };
-
-  var observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-
-      if (entry.isIntersecting) {
-        entry.target.style.transition = 'opacity 1s, transform 1s';
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateX(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
- 
-  var cards = document.querySelectorAll('.card');
-
-  cards.forEach((card, index) => {
-    card.style.opacity = 0;
-    card.style.transform = 'translateX(60%)'; 
-    setTimeout(() => {
-      observer.observe(card);
-    }, 1000 * index); 
-  });
-  
-
-
-
-});
 
 
 
@@ -532,44 +210,6 @@ const input = document.getElementById('searchInput');
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  var observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  };
-
-  var observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-
-      if (entry.isIntersecting) {
-        entry.target.style.transition = 'opacity 1s, transform 1s';
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateX(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  // var cards = document.querySelectorAll('.card');
-const special1 = document.querySelectorAll("#card5");
-// console.log(special1);
-
-special1.forEach((card, index) => {
-  console.log(`Applying styles to card ${index + 1}`);
-  card.style.opacity = 0;
-  card.style.transform = 'translateX(60%)';
-
-  setTimeout(() => {
-    observer.observe(card);
-  }, 900 * index);
-});
-
-
-
-
-});
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -609,42 +249,7 @@ special1.forEach((card, index) => {
 
 
 });
-document.addEventListener("DOMContentLoaded", function () {
-  var observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.5,
-  };
 
-  var observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-
-      if (entry.isIntersecting) {
-        entry.target.style.transition = 'opacity 1s, transform 1s';
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateX(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-const special1 = document.querySelectorAll("#fea1");
-
-
-special1.forEach((card, index) => {
-  console.log(`Applying styles to card ${index + 1}`);
-  card.style.opacity = 0;
-  card.style.transform = 'translateX(60%)';
-
-  setTimeout(() => {
-    observer.observe(card);
-  }, 900 * index);
-});
-
-
-
-
-});
 document.addEventListener("DOMContentLoaded", function () {
   var observerOptions = {
     root: null,
@@ -682,6 +287,160 @@ special1.forEach((card, index) => {
 
 
 });
+
+// const navbarElement = document.createElement("a");
+// navbarElement.href = "#ca";
+// navbarElement.innerHTML = "HOME";
+
+
+// const navbarElement2 = document.createElement("a");
+// navbarElement2.href = "#allproduct";
+// navbarElement2.innerHTML = "PRODUCTS";
+
+// const elementList = document.querySelector('.navbar2');
+
+// const navbarElement3 = document.createElement("a");
+// navbarElement3.href = "#le";
+// navbarElement3.innerHTML = "NEW";
+
+// const navbarElement4 = document.createElement("a");
+// navbarElement4.href = "#container4";
+// navbarElement4.innerHTML = "RECENT";
+
+// const navbarElement5 = document.createElement("a");
+// navbarElement5.href = "#container3";
+// navbarElement5.innerHTML = "BLOG";
+
+
+
+
+
+
+// elementList.appendChild(navbarElement);
+// elementList.appendChild(navbarElement2);
+// elementList.appendChild(navbarElement3);
+// elementList.appendChild(navbarElement4);
+// elementList.appendChild(navbarElement5);
+
+// const cardDataa = [
+//   {
+//     backgroundImage: './image/card/men (1).jpg',
+//     name: 'Shop for Man',
+//     price:'155 Products',
+//     btnn:'SHOP NOW'
+//   },
+//   {
+//     backgroundImage: './image/card/women.jpg',
+//     name: 'Shop for Woman',
+//     price:'155 Products',
+//     btnn:'SHOP NOW'
+
+
+//   }, {
+//     backgroundImage: './image/card/menandwomen.jpg',
+//     name: 'Shop for Man and Woman',
+//     price: '155 Products',
+//     btnn:'SHOP NOW'
+//   }
+
+
+// ]
+
+
+
+// var style1 = document.getElementById('card5');
+// // var style2 = document.getElementById('card2');
+// var style3 = document.getElementById('car');
+
+
+
+
+
+
+// cardDataa.forEach(data => {
+ 
+//   const imageElement = document.createElement('img');
+  
+//   const style2 = document.createElement('div');
+//     style2.classList.add('card1');
+
+// // imageElement.style.borderRadius = '10px';
+//     imageElement.src = data.backgroundImage;
+//   imageElement.height = 250;
+//     imageElement.width = 380;
+// // cardContainer4.style.marginLeft = '100px';    
+//   const title = document.createElement('h1');
+
+//   title.textContent = data.name;
+
+//   const subtitle = document.createElement('h4');
+//   subtitle.textContent = data.price;
+//    const btnfirst = document.createElement('button');
+//   btnfirst.textContent = data.btnn;
+//   // subtitle.classList.add('subtitle1');
+//   style2.appendChild(title);
+//   style2.appendChild(subtitle);
+//   style2.appendChild(btnfirst);
+  
+//   style1.appendChild(imageElement);
+//   style1.appendChild(style2);
+//   style3.appendChild(style1);
+  
+// });
+
+
+
+// const cardDatac = [
+//   {
+//     backgroundImage: './image/card/men (1).jpg'
+//   },
+//   {
+//     backgroundImage: './image/card/women.jpg'
+//   },
+//   {
+//     backgroundImage: './image/card/menandwomen.jpg'
+//   }
+// ];
+//  width="380" height="250"
+// var ft1 = document.querySelector('.car');
+// var ca2 = document.getElementById('card5');
+// cardDatac.forEach(data => {
+ 
+// const imageElement = document.createElement('img');
+
+//     imageElement.src = data.backgroundImage;
+//   imageElement.height = 250;
+//   imageElement.width = 380;
+//   ca2.appendChild(imageElement);
+//   // ft1.appendChild(ca2);
+// });
+
+
+
+
+
+// var featurea = document.querySelector('.feature1');
+// var featurea2 = document.querySelector('.features');
+
+// // Access the first object in the array
+// featurea.style.backgroundImage = `url('${cardDatac[0].backgroundImage}')`;
+
+// var featurea1 = document.querySelector('.feature1');
+// featurea1.style.backgroundImage = `url('${cardDatac[1].backgroundImage}')`;
+
+// featurea2.appendChild(featurea);
+// featurea2.appendChild(featurea1);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -32,3 +32,45 @@
     background-color: cornsilk;
 
 }
+
+/* Style the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    /* background-color: rgba(134, 67, 67, 0.5); */
+    /* z-index: inherit; */
+    margin-top: 270px;
+    background: transparent;
+    margin-left: 540px;
+    z-index: 1000;
+    /* border-end-end-radius: 20px; */
+}
+
+/* Style the modal content */
+.modal-content {
+    background-color: #d8cccc;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 40px;
+}
+
+/* Style the close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
