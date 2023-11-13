@@ -4,7 +4,7 @@
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #f8f8f8;
     padding: 10px 30px;
@@ -424,7 +424,7 @@ footer {
     height: full;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: start;
     padding-left: 40px;
     padding-right: 40px;
@@ -924,15 +924,33 @@ a:hover {
         }
 
         .ambition {
-            align-content: center;
+            padding-left: 200px;
         }
 
         .navbar {
             width: 70%;
         }
 
-        #foooter1 {
-            width: 70%;
+        /* #foooter1 {
+            justify-content: space-around;
+        } */
+
+        .navbar3 {
+            margin-left: 0px;
         }
+
+        /* #car {
+            height: auto;
+            width: 2500px;
+        }
+
+        .text-caro1 {
+            position: absolute;
+            top: 10;
+            left: 0;
+            margin-top: 10%;
+            margin-left: 10%;
+            color: rgb(99, 63, 63);
+        } */
     }
 }
