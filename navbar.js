@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./image/card/arrow.png" alt="" width="15" height="15"></button>
         </nav>
         <div class="Carousel" id="ca">
-        <img class="img1" src="./image/caro1.jpg" width="100%" height="600" alt="">
+        <img class="img1"  width="100%" height="600" alt="">
         <div class="text-caro1">
             <h2 class="allpro" id="monospace">New Inpsiration 2023</h2>
             <h1 class="word-animation">
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
        <div id="first">
         <div class="Carousel" id="ca">
-            <img class="img1" src="./image/caro1.jpg" width="97%" height="600" alt="">
+            <img class="img1"  width="97%" height="600" alt="">
             <div class="text-caro1">
                 <h2 class="allpro" id="monospace">New Inpsiration 2023</h2>
                 <h1 class="word-animation">
@@ -60,7 +60,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarContainer = document.getElementById("nav1");
     if (navbarContainer) {
         navbarContainer.innerHTML = navbar;
-    }
+  }
+ // Select the .img1 element
+var imageElement = document.querySelector(".img1");
+
+// Set the src attribute to './image/caro1.jpg'
+imageElement.src = './image/caro1.jpg';
+
+// Select the .Carousel element
+  var carouselElement = document.getElementById("ca");
+var carouselElement1 = document.getElementById("first");
+// Append the modified imageElement to the .Carousel element
+  carouselElement.appendChild(imageElement);
+  carouselElement1.appendChild(carouselElement);
 
     // Your card data here
    const cardData = [
@@ -172,5 +184,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
         searchInput.onkeyup = filterNames;
-    }
+  }
+  
+
+
 });

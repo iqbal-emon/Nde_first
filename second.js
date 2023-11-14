@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = ` <div class="second1">
+  const navbar = ` 
+  
+  <div class="second1">
     <div class="style1" id="card5">
-      <img src="./image/card/men (1).jpg" width="380" height="250" alt="">
+      <img id="upper1"  width="380" height="250" alt="">
       <div class="card1">
         <h1>Shop for Man</h1>
         <h4>155 Products</h4>
@@ -10,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
     <div class="style2" id="card5">
-      <img src="./image/card/women.jpg" width="380" height="250" alt="">
+      <img id="upper2" width="380" height="250" alt="">
       <div class="card2">
         <h1>Shop for Woman</h1>
         <h4>155 Products</h4>
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 
     <div class="style3" id="card5">
-      <img src="./image/card/menandwomen.jpg" width="380" height="250" alt="">
+      <img id="upper3"  width="380" height="250" alt="">
       <div class="card3">
         <h1>Shop for Man and Woman</h1>
         <h4>155 Products</h4>
@@ -62,4 +64,34 @@ document.addEventListener("DOMContentLoaded", function () {
       observer.observe(card);
     }, 900 * index);
   });
+  const specialItemsData = [
+    {
+      imageSrc: './image/card/men (1).jpg',
+    },
+    {
+      imageSrc: './image/card/women.jpg',
+    },
+    {
+       imageSrc:  '  ./image/card/menandwomen.jpg'
+    }
+     
+  
+  ];
+  
+  var imgElement1 = document.getElementById("upper1");
+  var imgElement2 = document.getElementById("upper2");
+  var imgElement3 = document.getElementById("upper3");
+      imgElement1.src = specialItemsData[0].imageSrc;
+
+     
+      imgElement2.src = specialItemsData[1].imageSrc;
+      
+
+     
+      imgElement3.src = specialItemsData[2].imageSrc;
+      
+
+
+
+
 });
