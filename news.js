@@ -12,7 +12,7 @@ const cardData3 = [
   {
     backgroundImage: './image/card/shoe1.jpg',
      title: 'Men first Shirt',
-        subtitle: '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
+        subtitle: '2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
@@ -53,7 +53,7 @@ cardData3.forEach(data => {
   const button = document.createElement('button');
   button.textContent = 'Read More';
   button.classList.add('btn11');
-
+  var cardee = document.querySelector(".carde");
   button.addEventListener('click', () => {
     if (fullText.style.display === 'none') {
       cardee.style.height = 'auto';
@@ -64,7 +64,7 @@ cardData3.forEach(data => {
       text.style.display = 'block';
       fullText.style.display = 'none';
       button.textContent = 'Read More';
-      ardee.style.height = 'auto';
+      cardee.style.height = 'auto';
     }
   });
 
