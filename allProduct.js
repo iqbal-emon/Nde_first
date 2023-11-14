@@ -127,7 +127,17 @@ cardContainer.style.marginLeft = '100px';
   
     const cartItem = document.createElement('div');
     cartItem.classList.add('div1');
-    cartItem.textContent = item.name + "=" + item.price;
+    cartItem.textContent = item.name + ' = ' + item.price;
+// cartItem.style.paddingBottom = '2px';
+const imageElement = document.createElement('img');
+imageElement.src = item.backgroundImage;
+ // You can set a meaningful alt text for accessibility
+imageElement.style.height = '20px';
+    imageElement.style.width = '20px';
+    imageElement.style.borderRadius = '10%';
+    imageElement.style.paddingLeft = '5px';
+// Append the image element to the cartItem
+cartItem.appendChild(imageElement);
     var hr = document.createElement('hr');
 
 
@@ -167,9 +177,9 @@ if (Amount) {
 });
 
 // Append the button to the dropdownContent
+
+dropdownContent.appendChild(cartItem2);
 dropdownContent.appendChild(button);
-    
-    dropdownContent.appendChild(cartItem2);
 }
 
 

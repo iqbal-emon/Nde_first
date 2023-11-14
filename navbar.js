@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <img id="cartbutton" class="images" src="./image/cart.png" alt="" width="22" height="22">
                 <div class="dropdown-content" id="myDropdown"></div>
             </div>
-            <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="./image/card/arrow.png" alt="" width="15" height="15"></button>
+
         </nav>
         <div class="Carousel" id="ca">
         <img class="img1"  width="100%" height="600" alt="">
@@ -164,28 +164,94 @@ var carouselElement1 = document.getElementById("first");
     }
 
     // Function to show and scroll to card
-    function showAndScrollToCard(name2) {
-        var searchResults = document.getElementById('searchResults');
-        const cards = document.querySelectorAll('.card');
-        const filter = document.getElementById('searchInput').value.toUpperCase();
-        searchResults.innerHTML = '';
+function showAndScrollToCard(name2) {
+    var searchResults = document.getElementById('searchResults');
+    const cards = document.querySelectorAll('.card');
+    const filter = document.getElementById('searchInput').value.toUpperCase();
+    searchResults.innerHTML = '';
 
-        cards.forEach((card, index) => {
-            const cardInfo = cardData[index];
-            console.log(cardInfo.name);
-            console.log("The name is " + name2);
-            if (cardInfo.name == name2) {
-                card.scrollIntoView();
+    console.log("Filter value: " + filter);  // Log the filter value to debug
+
+    cards.forEach((card, index) => {
+        const cardInfo = cardData[index];
+
+        if (cardInfo.name === name2) {
+            // Show the card that matches the search
+        // Show the card that matches the search
+      card.style.display = 'block';
+      card.style.marginLeft = 'auto'; // Center horizontally
+      card.style.marginRight = 'auto'; // Center horizontally
+      card.style.marginTop = '10px'; // Center vertically
+      card.style.marginBottom = 'auto'; // Center vertically
+      card.scrollIntoView({ block: 'center', inline: 'center' });
+
+            // Check if the search input is empty or null
+            if (!filter) {
+                // Show all cards when search is null or empty
+                cards.forEach((card) => {
+                    card.style.display = 'block';
+                });
             }
-        });
-    }
+        } else {
+            // Hide other cards
+            card.style.display = 'none';
+        }
+    });
+}
 
-    // Add the onkeyup event listener to the search input
-    const searchInput = document.getElementById('searchInput');
-    if (searchInput) {
-        searchInput.onkeyup = filterNames;
+// Function for keyup event
+function handleKeyup() {
+    filterNames();
+}
+
+// Function for keydown event
+function handleKeydown() {
+    requestAnimationFrame(showAllCards);  // Use requestAnimationFrame for smoother updates
+}
+
+// Function to show all cards
+function showAllCards() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card) => {
+       card.style.display = 'inline-block';
+        card.style.marginBottom = '10px'; // Add some margin between cards for better spacing
+    });
+}
+
+
+// Add the onkeyup and onkeydown event listeners to the search input
+const searchInput = document.getElementById('searchInput');
+if (searchInput) {
+    searchInput.onkeyup = handleKeyup;
+    searchInput.onkeydown = handleKeydown;
+}
+
+
+
+let mybutton = document.getElementById("myBtn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
   }
-  
+}
 
+function topFunction() {
+  document.documentElement.scrollTop = 0;
+}
+
+// Assuming you want to attach the topFunction to a button click
+if (mybutton) {
+  mybutton.addEventListener("click", topFunction);
+}
 
 });

@@ -443,6 +443,13 @@ footer {
     padding-left: 40px;
 }
 
+#hh:hover {
+    /* Styles on hover with underline */
+    text-decoration: underline;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
 .navbar2 {
 
     justify-content: space-between;
@@ -486,6 +493,65 @@ a:hover {
     height: 60px;
     text-align: center;
     padding-top: 1px;
+}
+
+
+.btn1:hover {
+    background-color: transparent;
+    color: #000;
+
+}
+
+.btn2:hover {
+    background-color: transparent;
+    color: white;
+
+}
+
+.btn3:hover {
+    background-color: transparent;
+    color: white;
+    box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    width: 100px;
+
+
+}
+
+.btn4:hover {
+    background-color: transparent;
+    color: white;
+    box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    width: 100px;
+
+
+}
+
+.btn5:hover {
+    background-color: transparent;
+    color: white;
+    box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    width: 100px;
+
+
+}
+
+.btn6:hover {
+    z-index: 3000;
+    background-color: transparent;
+    color: white;
+    box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    width: 100px;
+
+}
+
+.btn11:hover {
+    z-index: 3000;
+    background-color: transparent;
+    color: white;
+    box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
+    width: 100px;
+    border: 1px solid white;
+
 }
 
 .word-animation {
@@ -885,6 +951,53 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
 }
+
+.btn12 {
+
+
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    width: 80px;
+    color: rgb(66,
+            135,
+            245);
+    /* font-weight: bold; */
+}
+
+.btn12:hover {
+    background-color: rgb(66,
+            135,
+            245);
+    color: white;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    height: 40px;
+    width: 110px;
+    /* color: rgb(132, 109, 26); */
+
+}
+
+.car {
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+    border-radius: 10px;
+    background-color: white;
+    padding: 2%;
+
+}
+
+/* . {
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+    border-radius: 10px;
+    background-color: white;
+    padding: 2%;
+
+} */
+
+
 
 
 @media screen and (min-width: 2000px) {

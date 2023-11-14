@@ -2,33 +2,33 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = `  <div class="extra">
             <h2>EXTRAS</h2>
-            <p>Brands</p>
-            <p>Gift CErtificates</p>
-            <p>Affiliate</p>
-            <p>Specials</p>
-            <p>Site Map</p>
+            <p id="hh">Brands</p>
+            <p id="hh">Gift CErtificates</p>
+            <p id="hh">Affiliate</p>
+            <p id="hh">Specials</p>
+            <p id="hh">Site Map</p>
         </div>
         <div>
             <h2>INFORMATION</h2>
-            <p>About Us</p>
-            <p>Privacy Policy Terms & Conditions</p>
-            <p>Contact Us</p>
-            <p>Specials</p>
-            <p>Site Map</p>
+            <p id="hh">About Us</p>
+            <p id="hh">Privacy Policy Terms & Conditions</p>
+            <p id="hh">Contact Us</p>
+            <p id="hh">Specials</p>
+            <p id="hh">Site Map</p>
         </div>
         <div>
             <h2>MY ACCOUNT</h2>
-            <p>Order History</p>
-            <p>Wish List</p>
-            <p>NewSletter</p>
-            <p>Returns</p>
+            <p id="hh">Order History</p>
+            <p id="hh">Wish List</p>
+            <p id="hh">NewSletter</p>
+            <p id="hh">Returns</p>
         </div>
 
         <div>
             <h2>Nde,Steel Limited,Banani</h2>
-            <p>Nde@gmail.com</p>
-            <p>016868486</p>
-            <p>Dhaka,Bangladesh</p>
+            <p id="hh">Nde@gmail.com</p>
+            <p id="hh">016868486</p>
+            <p id="hh">Dhaka,Bangladesh </p>
 
         </div>
 `;
