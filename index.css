@@ -56,7 +56,7 @@
 
 
 .ambition {
-    margin-left: 600px;
+    margin-left: 45%;
     color: gray;
     font-size: larger;
 }
@@ -896,12 +896,15 @@ a:hover {
 
         #container {
             width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 590px;
+        }
+
+        .second1 {
+            margin-left: 620px;
         }
 
         #container3 {
-            margin-left: 500px;
+            margin-left: 580px;
         }
 
         #container4 {
@@ -966,6 +969,10 @@ a:hover {
             max-width: 2500px;
             margin: 0 auto;
             position: relative;
+        }
+
+        #ambition2 {
+            margin-left: 20%;
         }
     }
 }
