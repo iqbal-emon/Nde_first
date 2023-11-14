@@ -19,7 +19,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 10%;
     color: rgb(99, 63, 63);
 
@@ -102,6 +102,10 @@
     left: 30px;
     top: 30px;
     color: white;
+}
+
+#first {
+    padding-left: 1%;
 }
 
 .btn3 {
@@ -464,6 +468,11 @@ a:hover {
 
 #ca {
     margin-top: 30px;
+
+}
+
+.Carousel {
+    margin-left: 10%;
 }
 
 .container5 {
@@ -952,5 +961,11 @@ a:hover {
             margin-left: 10%;
             color: rgb(99, 63, 63);
         } */
+        #car {
+            width: 90%;
+            max-width: 2500px;
+            margin: 0 auto;
+            position: relative;
+        }
     }
 }
