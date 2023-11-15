@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5,
+    threshold: 0.2,
   };
 
   var observer = new IntersectionObserver((entries, observer) => {
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
       observer.observe(card);
-    }, 900 * index);
+    }, 100 * index);
   });
  var observerOptions = {
     root: null,

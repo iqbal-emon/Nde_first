@@ -1115,9 +1115,7 @@ a:hover {
     height: 30px;
     width: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: rgb(66,
-            135,
-            245);
+    background-color: orangered;
     color: white;
 }
 
@@ -1128,7 +1126,7 @@ a:hover {
     width: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
-    color: rgb(66, 135, 245);
+    color: orangered;
 }
 
 

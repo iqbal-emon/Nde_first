@@ -59,7 +59,7 @@ imageElement.style.borderRadius = '10px';
 var observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.5,
+    threshold: 0.2,
   };
 
   var observer = new IntersectionObserver((entries, observer) => {
@@ -82,7 +82,7 @@ var observerOptions = {
 
     setTimeout(() => {
       observer.observe(card);
-    }, 900 * index);
+    }, 100 * index);
   });
 
 
