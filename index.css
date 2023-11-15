@@ -982,6 +982,9 @@ a:hover {
     /* Enable vertical scroll if content exceeds the max height */
     /* border: 1px solid #ccc; */
     /* Border color */
+    margin-left: 5px;
+    margin-top: 27px;
+    /* padding: 8px; */
 }
 
 #searchResults div {
