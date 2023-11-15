@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = `<nav class="navbar">
             <div class="navbar2">
-                <a href="#ca">HOME</a>
-                <a href="#allproduct">PRODUCTS</a>
-                <a href="#le">NEW</a>
-                <a href="#container4">RECENT</a>
-                <a href="#container3">BLOG</a>
+                <a id="navbar-link" href="#ca">HOME</a>
+                <a id="navbar-link" href="#allproduct">PRODUCTS</a>
+                <a id="navbar-link" href="#le">NEW</a>
+                <a id="navbar-link" href="#container4">RECENT</a>
+                <a id="navbar-link" href="#container3">BLOG</a>
             </div>
             <div class="navbar3">
-                <input type="text" id="searchInput" style="margin-left: 10px; border:2px solid black; border-radius: 10px;">
+                <input type="text" id="searchInput" style="margin-left: 10px;  border-radius: 10px;">
+<img id="search1" src="./image/search.png" alt="">
+                
                 <div id="searchResults"></div>
-                <img id="cartbutton" class="images" src="./image/cart.png" alt="" width="22" height="22">
+                <p id="Count"></p>
+                <img id="cartbutton" class="images" src="./image/cart.png" alt="" width="25" height="25">
                 <div class="dropdown-content" id="myDropdown"></div>
             </div>
 
@@ -139,6 +142,11 @@ var carouselElement1 = document.getElementById("first");
   
 ];
 
+  
+  
+  
+  
+  
     // Function to filter names
     function filterNames() {
         const input = document.getElementById('searchInput');

@@ -1,62 +1,81 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="./payment.css">
+
 </head>
 
+<body>
+    <div id="container">
 
-<form id="payment-form">
-    <div id="card-element" style="padding-left: 300px;">
-        <h1 style="color: white;">Payment Using</h1>
-        <!-- <label for="card-element">Credit or Debit Card</label> -->
-        <p>Card Number:</p>
-        <input required type="number" style="border-radius: 10px;">
-    </div>
-
-
-
-    <div class="cardnumber">
-
-        <div>
-
-            <p>Expiration</p>
-            <input required type="date" style=" width: 150px; border-radius: 10px;">
-
-        </div>
-
-        <div style="padding-left: 20px;">
-
-            <p>CVC</p>
-            <input required type="text" style=" border-radius: 10px;">
-        </div>
 
     </div>
-
-
-
-
-    <!-- A Stripe Element will be inserted here. -->
-    </div>
-
-    <!-- Used to display form errors. -->
-    <div id="amount"></div>
-
-    <button id="subb" type="submit" style="margin-left: 300px">Submit Payment</button>
-</form>
-
-
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close" id="closeModalBtn">&times;</span>
-        <img style="height:100px;width: 100px; margin-left: 60px;" src="./image/right.png" alt="">
-        <h2 style="margin-left: 80px;">Done</h2>
-    </div>
-</div>
-<script src="./payment.js">
-</script>
 
 </body>
+
+<script>
+    let storedItemsArray = JSON.parse(localStorage.getItem("itemsArray"));
+
+    console.log(storedItemsArray);
+
+    const cardContainer = document.getElementById('container');
+    // const dropdownContent = document.getElementById('dropdownContent');
+    let cartAdd = [];
+
+    function showCartDetails() {
+
+        storedItemsArray.forEach(item => {
+            const cartItem8 = document.createElement('div');
+            cartItem8.classList.add('card');
+            const cartItem7 = document.createElement('div');
+            cartItem7.classList.add('div11');
+
+            const cartItem4 = document.createElement('div');
+            cartItem4.classList.add('div8');
+
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('div1');
+            cartItem.textContent = item.name;
+
+            const cartItem3 = document.createElement('div');
+            cartItem3.classList.add('div9');
+            cartItem3.textContent = item.price;
+            // cartItem3.style.fontSize = 18;
+
+            const cartItem5 = document.createElement('div');
+            cartItem5.classList.add('div10');
+
+            const imageElement = document.createElement('img');
+            imageElement.src = item.img;
+            imageElement.style.height = '200px';
+            imageElement.style.width = '300px';
+            imageElement.style.marginTop = '2%';
+            imageElement.style.borderRadius = '10%';
+
+            cartItem5.appendChild(imageElement);
+
+            cartItem4.appendChild(cartItem);
+            cartItem4.appendChild(cartItem3);
+
+            cartItem7.appendChild(cartItem5);
+            cartItem7.appendChild(cartItem4);
+            cartItem8.appendChild(cartItem7);
+            cardContainer.appendChild(cartItem8);
+
+        });
+    }
+
+
+    showCartDetails();
+
+
+
+
+</script>
+
 
 </html>
