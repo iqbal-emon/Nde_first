@@ -125,7 +125,7 @@ cardContainer.style.marginLeft = '100px';
   dropdownContent.innerHTML = ''; 
     var total = 0;
     let itemsArray = [];
-  cartAdd.forEach(item => {
+  cartAdd.forEach((item,index) => {
     const cartItem4 = document.createElement('div');
     cartItem4.classList.add('div8');
     const cartItem7 = document.createElement('div');
@@ -151,6 +151,25 @@ imageElement.style.height = '40px';
     imageElement.style.borderRadius = '10%';
     imageElement.style.paddingLeft = '5px';
     // Append the image element to the cartItem
+const cartItem12 = document.createElement('button');
+    cartItem12.classList.add('div13');
+    cartItem12.textContent = 'X';
+    // cartItem12.style.backgroundColor = 'red';
+    cartItem12.addEventListener('click', () => {
+      count--;
+      console.log("Enter");
+            console.log(item);
+
+            // Remove the item from cartAdd array at the current index
+            cartAdd.splice(index, 1);
+      console.log(cartAdd);
+            // Update the displayed cart items
+            showCartDetails();
+   
+   });
+
+
+
     let pr = document.createElement('p');
     pr.innerText = "hello";
 cartItem5.appendChild(imageElement);
@@ -158,7 +177,7 @@ cartItem5.appendChild(imageElement);
 cartItem7.appendChild(cartItem5); 
 cartItem7.appendChild(cartItem4);
 //  cartItem7.appendChild(pr);
-
+    cartItem7.appendChild(cartItem12);
 
 dropdownContent.append(cartItem7);
 var hr = document.createElement('hr');
@@ -224,6 +243,7 @@ if (Amount) {
  localStorage.setItem("itemsArray", JSON.stringify(itemsArray));
     Count1.innerHTML = count;
 // Append the button to the dropdownContent
+ localStorage.setItem("total", total.toString());
 
 dropdownContent.appendChild(cartItem2);
 dropdownContent.appendChild(button);

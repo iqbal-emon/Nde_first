@@ -263,13 +263,13 @@
     position: absolute;
     height: 20px;
     width: 20px;
-    margin-left: 158px;
-    margin-top: 2px;
+    margin-left: 150px;
+    margin-top: 2.5px;
     border: 0px solid #333;
     /* Border style and color */
     border-radius: 5px;
     /* background-color: gray; */
-    box-shadow: 5px 0 10px rgba(128, 128, 128, 0.3);
+    /* box-shadow: 5px 0 10px rgba(128, 128, 128, 0.3); */
 }
 
 .feature2 {
@@ -987,6 +987,23 @@ a:hover {
     /* padding: 8px; */
 }
 
+/* Your existing styles */
+
+.navbar-link.clicked {
+    color: red;
+    /* Change the color for the clicked link */
+}
+
+.navbar-link {
+    color: white;
+    /* Initial color for other links */
+    text-decoration: none;
+    padding: 10px;
+    margin-right: 15px;
+}
+
+/* Add more styling as needed */
+
 #searchResults div {
     padding: 8px;
     cursor: pointer;
@@ -1028,17 +1045,19 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 40px;
     width: 110px;
-    color: rgb(66,
-            135,
-            245);
-    /* font-weight: bold; */
-}
 
-.btn12:hover {
     background-color: rgb(66,
             135,
             245);
     color: white;
+    /* font-weight: bold; */
+}
+
+.btn12:hover {
+    background-color: white;
+    color: rgb(66,
+            135,
+            245);
     border-radius: 10px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 
@@ -1089,6 +1108,32 @@ a:hover {
     /* color: rgb(132, 109, 26); */
 
 }
+
+.div13 {
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 30px;
+    width: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(66,
+            135,
+            245);
+    color: white;
+}
+
+.div13:hover {
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 30px;
+    width: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: rgb(66, 135, 245);
+}
+
+
+
+
 
 @media screen and (min-width: 2000px) {
     body {

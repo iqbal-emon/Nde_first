@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = `<nav class="navbar">
             <div class="navbar2">
-                <a id="navbar-link" href="#ca">HOME</a>
-                <a id="navbar-link" href="#allproduct">PRODUCTS</a>
-                <a id="navbar-link" href="#le">NEW</a>
-                <a id="navbar-link" href="#container4">RECENT</a>
-                <a id="navbar-link" href="#container3">BLOG</a>
+                <a id="navbar-link1" href="#ca">HOME</a>
+                <a id="navbar-link2" href="#allproduct">PRODUCTS</a>
+                <a id="navbar-link3" href="#le">NEW</a>
+                <a id="navbar-link4" href="#container4">RECENT</a>
+                <a id="navbar-link5" href="#container3">BLOG</a>
             </div>
             <div class="navbar3">
                 <input type="text" id="searchInput" style="margin-left: 10px;  border-radius: 10px;">
@@ -64,6 +64,27 @@ document.addEventListener("DOMContentLoaded", function () {
     if (navbarContainer) {
         navbarContainer.innerHTML = navbar;
   }
+ const navbarLinks = document.querySelectorAll('.navbar2 a');
+
+    const handleLinkClick = (event) => {
+        // event.preventDefault();
+
+        // Reset the color of all links to white
+        navbarLinks.forEach(link => {
+            link.style.color = 'white';
+        });
+
+        // Set the color of the clicked link to blue
+        event.target.style.color = 'rgb(15, 181, 255)';
+    };
+
+    // Add click event listener to each link in the '.navbar2' container
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', handleLinkClick);
+    });
+
+
+
  // Select the .img1 element
 var imageElement = document.querySelector(".img1");
 
@@ -261,5 +282,6 @@ function topFunction() {
 if (mybutton) {
   mybutton.addEventListener("click", topFunction);
 }
+  
 
 });

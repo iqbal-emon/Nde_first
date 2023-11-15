@@ -1,18 +1,20 @@
 let storedItemsArray = JSON.parse(localStorage.getItem("itemsArray"));
-
-
-
+let storedTotal = parseFloat(localStorage.getItem("total")) || 0;
+console.log(storedItemsArray)
+console.log(storedTotal)
+let se = document.getElementById('amm');
+se.textContent = storedTotal;
 const cardContainer = document.getElementById('container');
 // const dropdownContent = document.getElementById('dropdownContent');
 let cartAdd = [];
-
+let count = 0; // Define count
 
 function showCartDetails() {
-    count++;
+  count++;
 
   storedItemsArray.forEach(item => {
     const cartItem7 = document.createElement('div');
-    cartItem7.classList.add('div11');
+    cartItem7.classList.add('div15');
 
     const cartItem4 = document.createElement('div');
     cartItem4.classList.add('div8');
@@ -29,9 +31,9 @@ function showCartDetails() {
     cartItem5.classList.add('div10');
 
     const imageElement = document.createElement('img');
-    imageElement.src = item.backgroundImage;
-    imageElement.style.height = '40px';
-    imageElement.style.width = '40px';
+    imageElement.src = item.img;
+    imageElement.style.height = '100px';
+    imageElement.style.width = '100px';
     imageElement.style.marginTop = '2%';
     imageElement.style.borderRadius = '10%';
 
@@ -43,10 +45,10 @@ function showCartDetails() {
     cartItem7.appendChild(cartItem5);
     cartItem7.appendChild(cartItem4);
 
-    cardContainer.appendChild(cartItem7);
+      cardContainer.appendChild(cartItem7);
+      
 
   });
 }
-
 
 showCartDetails();

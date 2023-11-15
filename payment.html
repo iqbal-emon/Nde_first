@@ -6,76 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./payment.css">
+    <link rel="stylesheet" href="./index.css">
+
 
 </head>
 
 <body>
+
+
     <div id="container">
 
-
+    </div>
+    <div class="di">
+        <h1>Amount</h1>
+        <h1 id="amm"></h1>
+        <button class="paynow">Pay Now</button>
     </div>
 
+    <!-- <footer id="footer1">
+
+    </footer> -->
+
+    <script src="./payment.js"></script>
+    <script src="./footer.js"></script>
 </body>
-
-<script>
-    let storedItemsArray = JSON.parse(localStorage.getItem("itemsArray"));
-
-    console.log(storedItemsArray);
-
-    const cardContainer = document.getElementById('container');
-    // const dropdownContent = document.getElementById('dropdownContent');
-    let cartAdd = [];
-
-    function showCartDetails() {
-
-        storedItemsArray.forEach(item => {
-            const cartItem8 = document.createElement('div');
-            cartItem8.classList.add('card');
-            const cartItem7 = document.createElement('div');
-            cartItem7.classList.add('div11');
-
-            const cartItem4 = document.createElement('div');
-            cartItem4.classList.add('div8');
-
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('div1');
-            cartItem.textContent = item.name;
-
-            const cartItem3 = document.createElement('div');
-            cartItem3.classList.add('div9');
-            cartItem3.textContent = item.price;
-            // cartItem3.style.fontSize = 18;
-
-            const cartItem5 = document.createElement('div');
-            cartItem5.classList.add('div10');
-
-            const imageElement = document.createElement('img');
-            imageElement.src = item.img;
-            imageElement.style.height = '200px';
-            imageElement.style.width = '300px';
-            imageElement.style.marginTop = '2%';
-            imageElement.style.borderRadius = '10%';
-
-            cartItem5.appendChild(imageElement);
-
-            cartItem4.appendChild(cartItem);
-            cartItem4.appendChild(cartItem3);
-
-            cartItem7.appendChild(cartItem5);
-            cartItem7.appendChild(cartItem4);
-            cartItem8.appendChild(cartItem7);
-            cardContainer.appendChild(cartItem8);
-
-        });
-    }
-
-
-    showCartDetails();
-
-
-
-
-</script>
-
 
 </html>

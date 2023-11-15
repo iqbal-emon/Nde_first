@@ -1,38 +1,84 @@
-.card {
-
-    display: inline-block;
-    width: 300px;
-    height: 330px;
-    margin: 10px;
-    /* border: 2px solid black; */
-    /* display: block; */
-
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-align: center;
-    /* height: 400px;
-    width: 300px; */
-    border: 1px solid white;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-
-
-}
-
-#container {
-    text-align: center;
-}
-
-.div9 {
-
-    font-weight: bold;
-    font-size: 18px;
-
+.div8 {
+    position: relative;
+    display: flex;
+    /* justify-content: space-around; */
+    /* padding-top: 80px;
+    justify-content: space-between; */
+    /* padding-left: 30%; */
+    /* justify-content: ; */
 }
 
 .div1 {
-    margin-top: 20px;
-    font-weight: bold;
-    font-size: 18px;
+    margin-left: 300px;
+    margin-top: 15px;
+}
+
+.div9 {
+    margin-left: 80%;
+    margin-top: 40px;
+
+}
+
+.div15 {
+    position: relative;
+    display: flex;
+    height: 40%;
+    width: 70%;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 2%;
+    margin-left: 30px;
+
+}
+
+.di {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    border: 2px solid white;
+    margin-left: 50px;
+    height: 40%;
+    width: 20%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: orangered;
+    color: white;
+    position: fixed;
+
+
+}
+
+.div10 {
+    margin-left: 30px;
+}
+
+
+.paynow {
+    margin-top: 15%;
+
+    border-radius: 10px;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 40px;
+    width: 110px;
+
+    background-color: rgb(66,
+            135,
+            245);
+    color: white;
+    /* font-weight: bold; */
+}
+
+.paynow:hover {
+    background-color: white;
+    color: rgb(66,
+            135,
+            245);
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+
+    /* color: rgb(132, 109, 26); */
 
 }
