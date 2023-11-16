@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="navbar3">
                 <input type="text" id="searchInput" style="margin-left: 10px;  border-radius: 10px;">
-<img id="search1" src="./image/search.png" alt="">
+
+<button id="search1"></button>
                 
                 <div id="searchResults"></div>
                 <p id="Count"></p>
@@ -41,14 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="Carousel" id="ca">
             <img class="img1"  width="97%" height="600" alt="">
             <div class="text-caro1">
-                <h2 class="allpro" id="monospace">New Inpsiration 2023</h2>
+                <h2  id="monospace">New Inpsiration 2023</h2>
                 <h1 class="word-animation">
                     <span>CLOTHING</span>
                     <span>MADE</span>
                     <span>FOR</span>
                     <span>YOU!</span>
                 </h1>
-                <h3 class="allpro" id="monospace">Trending from men and women style collection</h3>
+                <h3  id="monospace">Trending from men and women style collection</h3>
 
                 <div class="btn">
                     <button class="btn1">SHOP WOMEN'S</button>
@@ -75,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Set the color of the clicked link to blue
-        event.target.style.color = 'rgb(15, 181, 255)';
+      event.target.style.color = 'orangered';
     };
 
     // Add click event listener to each link in the '.navbar2' container
@@ -164,97 +165,38 @@ var carouselElement1 = document.getElementById("first");
 ];
 
   
-  
-  
-  
-  
-    // Function to filter names
-    function filterNames() {
-        const input = document.getElementById('searchInput');
-        const filter = input.value.toUpperCase();
-        const resultsContainer = document.getElementById('searchResults');
-
-        if (filter === '') {
-            resultsContainer.innerHTML = ''; // Clear the results container
-            return;
-        }
-
-        const filteredNames = cardData.filter(item => item.name.toUpperCase().includes(filter));
-
-        resultsContainer.innerHTML = '';
-        filteredNames.forEach(item => {
-            const resultItem = document.createElement('div');
-            resultItem.innerText = item.name;
-            resultItem.onclick = function () {
-                showAndScrollToCard(item.name);
-            };
-            resultsContainer.appendChild(resultItem);
-        });
-    }
-
-    // Function to show and scroll to card
-function showAndScrollToCard(name2) {
-    var searchResults = document.getElementById('searchResults');
+  // Function to filter names
+function filterNames() {
+    const input = document.getElementById('searchInput');
+    const filter = input.value.toUpperCase();
     const cards = document.querySelectorAll('.card');
-    const filter = document.getElementById('searchInput').value.toUpperCase();
-    searchResults.innerHTML = '';
-
-    console.log("Filter value: " + filter);  // Log the filter value to debug
+    const containerDiv = document.getElementById('container'); // Replace 'container' with your actual container div ID
 
     cards.forEach((card, index) => {
         const cardInfo = cardData[index];
+        const cardName = cardInfo.name.toUpperCase();
 
-        if (cardInfo.name === name2) {
-            // Show the card that matches the search
-        // Show the card that matches the search
-      card.style.display = 'block';
-      card.style.marginLeft = 'auto'; // Center horizontally
-      card.style.marginRight = 'auto'; // Center horizontally
-      card.style.marginTop = '10px'; // Center vertically
-      card.style.marginBottom = 'auto'; // Center vertically
-      card.scrollIntoView({ block: 'center', inline: 'center' });
-
-            // Check if the search input is empty or null
-            if (!filter) {
-                // Show all cards when search is null or empty
-                cards.forEach((card) => {
-                    card.style.display = 'block';
-                });
-            }
+        if (cardName.includes(filter) || filter === '') {
+            card.style.display = 'inline-block';
+            containerDiv.scrollIntoView({ block: 'center', inline: 'center' });
         } else {
-            // Hide other cards
             card.style.display = 'none';
         }
     });
+
+    // Scroll to the container div after filtering
 }
 
-// Function for keyup event
-function handleKeyup() {
+// Function to handle button click
+function handleSearchButtonClick() {
     filterNames();
 }
 
-// Function for keydown event
-function handleKeydown() {
-    requestAnimationFrame(showAllCards);  // Use requestAnimationFrame for smoother updates
+// Add the onclick event listener to the search1 button
+const search1Button = document.getElementById('search1');
+if (search1Button) {
+    search1Button.onclick = handleSearchButtonClick;
 }
-
-// Function to show all cards
-function showAllCards() {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((card) => {
-       card.style.display = 'inline-block';
-        card.style.marginBottom = '10px'; // Add some margin between cards for better spacing
-    });
-}
-
-
-// Add the onkeyup and onkeydown event listeners to the search input
-const searchInput = document.getElementById('searchInput');
-if (searchInput) {
-    searchInput.onkeyup = handleKeyup;
-    searchInput.onkeydown = handleKeydown;
-}
-
 
 
 let mybutton = document.getElementById("myBtn");

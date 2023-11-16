@@ -56,7 +56,7 @@ cardData3.forEach(data => {
       text.style.display = 'block';
       fullText.style.display = 'none';
       button.textContent = 'Read More';
-      ardee.style.height = 'auto';
+      cardee.style.height = 'auto';
     }
   });
 

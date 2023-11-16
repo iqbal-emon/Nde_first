@@ -1,12 +1,28 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    const navbar = `  
+  const navbar = `
+    
 `;
     
     const navbarContainer = document.getElementById("ca");
     if (navbarContainer) {
         navbarContainer.innerHTML = navbar;
     }
+// Create the div element with class "lastest" and id "le"
+const latestDiv = document.createElement('div');
+latestDiv.classList.add('lastest');
+latestDiv.id = 'le';
+
+// Create the h2 element with class "allpro"
+const heading = document.createElement('h2');
+heading.classList.add('allpro');
+heading.textContent = 'Latest Products';
+
+// Append the h2 element to the div element
+latestDiv.appendChild(heading);
+
+// Append the entire latestDiv to the document body (you can replace document.body with another parent element if needed)
+
 
 const container2 = document.getElementById('container2');
 const cardData2 = [
@@ -31,7 +47,7 @@ const cardData2 = [
     subtitle: '2000$'
   }
 ];
-
+  container2.appendChild(latestDiv);
 cardData2.forEach(data => {
   const card = document.createElement('div');
   card.classList.add('card');
@@ -59,7 +75,7 @@ imageElement.style.borderRadius = '10px';
 var observerOptions = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.2,
+    threshold: 0.1,
   };
 
   var observer = new IntersectionObserver((entries, observer) => {
@@ -78,11 +94,11 @@ var observerOptions = {
   special1.forEach((card, index) => {
     console.log(`Applying styles to card ${index + 1}`);
     card.style.opacity = 0;
-    card.style.transform = 'translateX(60%)';
+    card.style.transform = 'translateX(90%)';
 
     setTimeout(() => {
       observer.observe(card);
-    }, 100 * index);
+    }, 50* index);
   });
 
 

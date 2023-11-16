@@ -2,8 +2,24 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = `  
 `;
+  // Create the outer div element with class "lastest"
+const outerDiv = document.createElement('div');
+outerDiv.classList.add('lastest');
+
+// Create the h2 element with class "allpro" and text content "Latest News"
+const h2Element = document.createElement('h2');
+h2Element.classList.add('allpro');
+h2Element.textContent = 'Latest News';
+
+// Append the h2 element to the outer div
+outerDiv.appendChild(h2Element);
+
+// Append the entire outerDiv to the document body (you can replace document.body with another parent element if needed)
+
+
     
-    const navbarContainer = document.getElementById("container3");
+  const navbarContainer = document.getElementById("container3");
+  navbarContainer.appendChild(outerDiv)
     if (navbarContainer) {
         navbarContainer.innerHTML = navbar;
     }
@@ -27,7 +43,7 @@ const cardData3 = [
 ];
 
 const container33 = document.getElementById('container3');
-
+  container33.appendChild(outerDiv);
 cardData3.forEach(data => {
   const card = document.createElement('div');
   card.classList.add('carde');

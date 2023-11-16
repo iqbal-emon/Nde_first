@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
   // First part of the code (generating special items)
-  const navbar = ``;
+  const navbar = `
+   
+  `;
 
+
+  const specialContainer = document.querySelector('.special');
+  specialContainer.appendChild(trendingDiv);
   const navbarContainer = document.getElementById("special");
   if (navbarContainer) {
     navbarContainer.innerHTML = navbar;
   }
-
-  const specialContainer = document.querySelector('.special');
-
   const specialItemsData = [
     {
       imageSrc: './image/card/shoe1.jpg',
@@ -101,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
   special1.forEach((card, index) => {
     console.log(`Applying styles to card ${index + 1}`);
     card.style.opacity = 0;
-    card.style.transform = 'translateX(60%)';
+    card.style.transform = 'translateX(90%)';
 
     setTimeout(() => {
       observer.observe(card);

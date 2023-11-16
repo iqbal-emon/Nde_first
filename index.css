@@ -6,11 +6,14 @@
     z-index: 2000;
     justify-content: space-around;
     align-items: center;
-    background-color: orangered;
+    background-color: rgb(85, 183, 197);
     padding: 10px 30px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     height: 30px;
     width: 96.5%;
+    /* border-top-right-radius: 10px; */
+    /* border-radius: 10px;
+     */
     /* border-radius: 20px;
     border-top-right-radius: 20px; */
     /* Make it full-width */
@@ -63,9 +66,10 @@
 
 
 .ambition {
-    margin-left: 45%;
+    margin-left: 40%;
     color: gray;
     font-size: larger;
+    font-size: 25px;
 }
 
 .style1 {
@@ -260,17 +264,30 @@
 }
 
 #search1 {
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-image: url('./image/search.png');
+    background-size: cover;
+    box-shadow: 5px 0 10px #8080804d;
     position: absolute;
     height: 20px;
     width: 20px;
-    margin-left: 150px;
+    margin-left: 155px;
+    color: white;
+    /* background-color: gray; */
     margin-top: 2.5px;
-    border: 0px solid #333;
+
     /* Border style and color */
     border-radius: 5px;
     /* background-color: gray; */
-    /* box-shadow: 5px 0 10px rgba(128, 128, 128, 0.3); */
+    box-shadow: 5px 0 20px rgba(128, 128, 128, 0.5);
 }
+
+/* #search1:hover {
+    box-shadow: 10px 0 20px #8080804d;
+} */
 
 .feature2 {
     margin-left: 20px;
@@ -340,8 +357,6 @@
 
 
 
-
-
 .feature4 {
     margin-left: 20px;
     /* background-image: url('./image/card2/one (1).jpg'); */
@@ -384,8 +399,10 @@
 }
 
 .titie {
+    margin-left: -70px;
+    margin-right: 120px;
     margin-top: 20px;
-    background-color: gray;
+    background-color: rgb(85, 183, 197);
     height: 60px;
     width: 100%;
     text-align: center;
@@ -411,6 +428,7 @@
     border: 1px solid white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    padding-bottom: 10px;
 
 }
 
@@ -444,26 +462,39 @@ h2 {
     font-size: 18px;
 }
 
-.container {
-    display: grid;
-    margin-left: 100px;
-}
+
 
 .lastest {
     margin-top: 20px;
-    background-color: gray;
+    background-color: rgb(85, 183, 197);
     height: 60px;
     text-align: center;
     padding-top: 1px;
+    /* margin-right: 120px; */
+    margin-left: -70px;
+    border-radius: 10px;
 }
 
 #container3 {
-    margin-left: 100px;
+    margin-left: 120px;
+}
+
+.allpro {
+    padding-top: -15px;
+    /* margin-right: 120px; */
+    /* margin-left: -50px; */
+    margin-left: -70px;
+    font-size: 25px;
+
+}
+
+#allproduct {
+    border-radius: 10px;
 }
 
 footer {
     margin-top: 20px;
-    background-color: black;
+    background-color: rgb(85, 183, 197);
     width: auto;
     height: full;
     color: white;
@@ -519,6 +550,7 @@ a:hover {
     position: absolute;
     top: -10px;
     margin-left: 14%;
+    /* right: 11.2%; */
     min-width: 14px;
     line-height: 14px;
     border-radius: 50%;
@@ -528,6 +560,10 @@ a:hover {
     /* font-weight: bold; */
 
 
+}
+
+#allproduct {
+    width: 100%;
 }
 
 #ca {
@@ -541,11 +577,14 @@ a:hover {
 }
 
 .container5 {
+    margin-left: -70px;
     margin-top: 20px;
-    background-color: gray;
+    background-color: rgb(85, 183, 197);
     height: 60px;
     text-align: center;
     padding-top: 1px;
+    left: 0;
+    border-radius: 10px;
 }
 
 
@@ -565,7 +604,7 @@ a:hover {
     background-color: transparent;
     color: white;
     box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
-    width: 100px;
+    /* width: 100px; */
 
 
 }
@@ -574,7 +613,7 @@ a:hover {
     background-color: transparent;
     color: white;
     box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
-    width: 100px;
+    /* width: 100px; */
 
 
 }
@@ -583,7 +622,7 @@ a:hover {
     background-color: transparent;
     color: white;
     box-shadow: 10px 5px 20px 5px rgba(0, 0, 0, 0.5);
-    width: 100px;
+    /* width: 100px; */
 
 
 }
@@ -811,6 +850,8 @@ a:hover {
 #monospace {
     font-family: Monospace;
     margin-bottom: 30px;
+    margin-left: 25px;
+    font-size: 18px;
 }
 
 .btn11 {
@@ -925,10 +966,10 @@ a:hover {
 
 }
 
-.div1:hover {
+/* .div1:hover {
     background-color: rgb(15, 181, 255);
 
-}
+} */
 
 
 
@@ -1031,33 +1072,31 @@ a:hover {
     display: block;
 } */
 .second1 {
+
     display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin-left: 100px;
 }
 
 .btn12 {
 
-
+    border: none;
     border-radius: 10px;
     background-color: transparent;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 40px;
     width: 110px;
 
-    background-color: rgb(66,
-            135,
-            245);
+    background-color: rgb(85, 183, 197);
     color: white;
     /* font-weight: bold; */
 }
 
 .btn12:hover {
     background-color: white;
-    color: rgb(66,
-            135,
-            245);
+    color: rgb(85, 183, 197);
     border-radius: 10px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 
@@ -1091,17 +1130,14 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 40px;
     width: 110px;
-    color: rgb(66,
-            135,
-            245);
+    background-color: rgb(85, 183, 197);
+    border: none;
     /* font-weight: bold; */
 }
 
 .your-button-class:hover {
-    background-color: rgb(66,
-            135,
-            245);
-    color: white;
+    background-color: white;
+    color: rgb(85, 183, 197);
     border-radius: 10px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 
@@ -1115,7 +1151,7 @@ a:hover {
     height: 30px;
     width: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: orangered;
+    background-color: red;
     color: white;
 }
 
@@ -1129,6 +1165,10 @@ a:hover {
     color: orangered;
 }
 
+
+.car {
+    margin-top: 2%;
+}
 
 
 
@@ -1150,22 +1190,34 @@ a:hover {
             margin-left: 570px;
         }
 
+
         .second1 {
             margin-left: 553px;
         }
 
         #container3 {
-            margin-left: 495px;
+            margin-left: 500px;
+            margin-right: 600px;
         }
 
         #container4 {
             margin-left: 500px;
-
+            margin-right: 600px;
 
         }
 
+        .di {
+            height: 60%;
+            margin-bottom: 20%;
+        }
+
+        /* .scroll1 {
+            margin-bottom: 20%;
+        } */
+
         #container2 {
             margin-left: 400px;
+            margin-right: 600px;
         }
 
         #con1 {
@@ -1186,9 +1238,8 @@ a:hover {
 
         }
 
-        .ambition {
-            padding-left: 200px;
-        }
+
+        #ambition2 {}
 
         /* .navbar {
             width: full;
@@ -1222,9 +1273,20 @@ a:hover {
             position: relative;
         }
 
+        /* 
+        #Count {
+            margin-left: 8%;
+        } */
+
         #ambition2 {
             margin-left: 20%;
+            padding-left: 200px;
+            height: 30px;
+            width: full;
+            background-color: red;
         }
+
+
 
         .navbar {
 

@@ -1,7 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = ` 
   
+
+<div class="second">
+<div id="ambition2">
+
+
+        <h2 class="ambition">Allow your style to match your ambition</h2>
+    </div>
+  
+   
   <div class="second1">
+  
+
+
     <div class="style1" id="card5">
       <img id="upper1"  width="380" height="250" alt="">
       <div class="card1">
@@ -29,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>
    </div>
+   </div>
+  
   `;
 
   const navbarContainer = document.querySelector(".car");
@@ -36,34 +50,35 @@ document.addEventListener("DOMContentLoaded", function () {
     navbarContainer.innerHTML = navbar;
   }
 
-  var observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1,
-  };
+ var observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.01,
+};
 
-  var observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.transition = 'opacity 1s, transform 1s';
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateX(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  const special1 = document.querySelectorAll("#card5");
-
-  special1.forEach((card, index) => {
-    console.log(`Applying styles to card ${index + 1}`);
-    card.style.opacity = 0;
-    card.style.transform = 'translateX(60%)';
-
-    setTimeout(() => {
-      observer.observe(card);
-    }, 50 * index);
+var observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.transition = 'opacity 1s, transform 1s';
+      entry.target.style.opacity = 1;
+      entry.target.style.transform = 'translateX(0)';
+      observer.unobserve(entry.target);
+    }
   });
+}, observerOptions);
+
+const special1 = document.querySelectorAll("#card5");
+
+special1.forEach((card, index) => {
+  console.log(`Applying styles to card ${index + 1}`);
+  card.style.opacity = 0;
+  card.style.transform = 'translateX(90%)';
+
+  setTimeout(() => {
+    observer.observe(card);
+  }, index *0.1); // Adjust the timeout value (in milliseconds) as needed
+});
+
   const specialItemsData = [
     {
       imageSrc: './image/card/men (1).jpg',

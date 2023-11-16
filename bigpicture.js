@@ -19,9 +19,13 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </div>
 `;
+// 
+// Append the entire outerDiv to the document body (you can replace document.body with another parent element if needed)
+
 
   const navbarContainer = document.querySelector(".features");
   if (navbarContainer) {
+  
     navbarContainer.innerHTML = navbar;
   }
 

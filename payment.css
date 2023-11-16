@@ -1,3 +1,27 @@
+#orderlist {
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgb(85, 183, 197);
+    height: 70%;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.scroll1 {
+    height: 420px;
+    /* Set the height according to your requirements */
+    overflow: auto;
+    /* Set overflow property to auto or scroll */
+    border: 2px solid white;
+    box-shadow: 5px 5px 10px rgb(85, 183, 197);
+}
+
+
+
+
+
 .div8 {
     position: relative;
     display: flex;
@@ -6,34 +30,52 @@
     justify-content: space-between; */
     /* padding-left: 30%; */
     /* justify-content: ; */
+    color: orangered;
+    padding-left: 20px;
 }
 
 .div1 {
     margin-left: 300px;
     margin-top: 15px;
+    /* width: 50px; */
+    /* color: orangered; */
 }
 
 .div9 {
     margin-left: 80%;
     margin-top: 40px;
 
+
+}
+
+@media screen and (min-width: 2000px) {
+    .di {
+        margin-bottom: 20%;
+
+    }
+}
+
+#footer1 {
+    /* margin-top: 20%; */
+    /* position:fle; */
 }
 
 .div15 {
+    color: orangered;
     position: relative;
     display: flex;
     height: 40%;
     width: 70%;
     border: 2px solid white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 10px rgb(85, 183, 197);
     margin-top: 2%;
     margin-left: 30px;
 
 }
 
 .di {
-    position: absolute;
+    /* position: absolute; */
     right: 5%;
     top: 20%;
     border: 2px solid white;
@@ -43,11 +85,9 @@
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background-color: orangered;
+    background-color: rgb(85, 183, 197);
     color: white;
     position: fixed;
-
-
 }
 
 .div10 {
@@ -64,9 +104,7 @@
     height: 40px;
     width: 110px;
 
-    background-color: rgb(66,
-            135,
-            245);
+    background-color: red;
     color: white;
     /* font-weight: bold; */
 }
