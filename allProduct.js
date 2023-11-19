@@ -124,6 +124,7 @@ function showCartDetails() {
 
     const cartItem4 = document.createElement('div');
     cartItem4.classList.add('div8');
+    cartItem4.style.width = '100px';
     const cartItem7 = document.createElement('div');
     cartItem7.classList.add('div11');
     const cartItem = document.createElement('div');

@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = ` 
-    <div id="container"></div>
-    <div class="di">
-        <h1>Amount</h1>
-        <h1 id="amm"></h1>
-        <button class="paynow">Pay Now</button>
-    </div>
-  `;
+  const navbar = `
+  <div id="container"></div>
+  <div class="di">
+  <h1>Amount</h1>
+  <h1 id="amm"></h1>
+  <button class="paynow">Pay Now</button>
+  </div>
+  
+`;
 
   const navbarContainer = document.querySelector(".scroll1");
   if (navbarContainer) {
