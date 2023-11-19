@@ -271,7 +271,7 @@
 
 #searchInput::placeholder {
     text-align: center;
-    padding-left: 70%;
+    padding-left: 30%;
     /* Adjust the value based on the desired centering */
     transform: translateX(-50%);
 }
@@ -518,7 +518,7 @@ h2 {
 
 footer {
     margin-top: 20px;
-    background-color: rgb(85, 183, 197);
+    background-color: rgb(3, 22, 55);
     /* width: auto; */
     /* height: full; */
     color: white;
@@ -547,6 +547,7 @@ footer {
 
     justify-content: space-between;
     margin-left: 25%;
+
 }
 
 a {
@@ -554,11 +555,12 @@ a {
     font-size: larger;
     margin: 20px;
     color: white;
-
 }
 
 a:hover {
-    color: rgb(97, 185, 199);
+    padding-bottom: 10px;
+    border-bottom: 4px solid white;
+
 }
 
 .navbar3 {
@@ -1020,8 +1022,8 @@ a:hover {
     /* color: rgb(25, 164, 0); */
     font-weight: bolder;
     font-size: 20px;
-    background-color: rgb(15, 181, 255);
-    color: white;
+    /* background-color: rgb(15, 181, 255); */
+    color: black;
 
 }
 
@@ -1101,7 +1103,7 @@ a:hover {
 
 .your-button-class {
     height: 30px;
-    width: 100px;
+    width: 80px;
     margin-top: 20px;
     background-color: red;
     border-radius: 10px;
@@ -1177,7 +1179,7 @@ a:hover {
     width: 110px;
     background-color: rgb(85, 183, 197);
     border: none;
-    /* font-weight: bold; */
+    font-weight: bolder;
 }
 
 .your-button-class:hover {

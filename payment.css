@@ -110,14 +110,32 @@
     margin-left: 650px;
     border: 2px solid white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    background-color: red;
+    /* border-radius: 20px; */
+    background-color: rgb(85, 183, 197);
+    font-weight: bolder;
+    color: white;
 }
 
-.delete-btn:hover {
-    background-color: white;
-    color: red;
+.delete-btn1 {
+    background-color: rgb(85, 183, 197);
+    height: 30px;
+    width: 40px;
+    margin-top: -50px;
+    margin-left: 20px;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* border-radius: 20px; */
+    /* background-color: white; */
+    font-weight: bolder;
+    color: white;
 }
+
+
+
+
+
+
+
 
 
 .div15 {
@@ -166,19 +184,11 @@
     height: 40px;
     width: 110px;
 
-    background-color: red;
-    color: white;
-    /* font-weight: bold; */
-}
-
-.paynow:hover {
     background-color: white;
     color: rgb(66,
             135,
             245);
     border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-
-    /* color: rgb(132, 109, 26); */
-
+    font-weight: bolder;
+    /* font-weight: bold; */
 }

@@ -69,14 +69,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const handleLinkClick = (event) => {
         // event.preventDefault();
-
+      // var linkTag = document.getElementsByTagName("a");
+      
         // Reset the color of all links to white
-        navbarLinks.forEach(link => {
-            link.style.color = 'white';
+      navbarLinks.forEach(link => {
+       
+          link.style.color = 'white';
+      link.style.borderBottom = 'none';
+          
         });
 
         // Set the color of the clicked link to blue
-      event.target.style.color = 'orangered';
+      event.target.style.borderBottom = '4px solid white';
     };
 
     // Add click event listener to each link in the '.navbar2' container
