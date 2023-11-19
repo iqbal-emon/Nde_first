@@ -91,13 +91,15 @@
         background-color: rgb(85, 183, 197);
         color: white;
         position: fixed;
+        /* margin-bottom: 100px; */
+
 
 
     }
 
     #footer1 {
         width: 100%;
-        margin-top: 120px;
+        margin-top: 20px;
     }
 }
 
@@ -147,6 +149,7 @@
     background-color: rgb(85, 183, 197);
     color: white;
     position: fixed;
+    /* z-index: 0; */
 }
 
 .div10 {

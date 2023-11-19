@@ -577,7 +577,7 @@ a:hover {
     z-index: 100;
     position: absolute;
     top: 6px;
-    left: 93.0%;
+    left: 96.5%;
     min-width: 14px;
     line-height: 14px;
     border-radius: 50%;
@@ -585,7 +585,7 @@ a:hover {
     /* border: 1px solid #f85606; */
     background-color: white;
     /* font-weight: bold; */
-
+    position: fixed;
 
 }
 
@@ -1226,9 +1226,12 @@ a:hover {
 @media screen and (min-width: 2000px) {
 
     body {
+        .navbar3 {
+            padding-left: 600px;
+        }
 
         #Count {
-            margin-right: auto;
+            right: 200px;
         }
 
         /* background-color: black; */
