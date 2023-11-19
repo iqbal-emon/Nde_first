@@ -92,11 +92,12 @@
         color: white;
         position: fixed;
 
+
     }
 
     #footer1 {
-        position: fixed;
-        margin-top: 200px;
+        width: 100%;
+        margin-top: 120px;
     }
 }
 
