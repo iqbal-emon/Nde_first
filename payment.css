@@ -101,6 +101,22 @@
     }
 }
 
+.delete-btn {
+    height: 30px;
+    width: 40px;
+    margin-top: -50px;
+    margin-left: 650px;
+    border: 2px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: red;
+}
+
+.delete-btn:hover {
+    background-color: white;
+    color: red;
+}
+
 
 .div15 {
     color: orangered;

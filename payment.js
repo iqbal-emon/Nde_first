@@ -1,14 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navbar = ` 
-  <div id="container">
-
-        </div>
-        <div class="di">
-            <h1>Amount</h1>
-            <h1 id="amm"></h1>
-            <button class="paynow">Pay Now</button>
-        </div>
-  
+    <div id="container"></div>
+    <div class="di">
+        <h1>Amount</h1>
+        <h1 id="amm"></h1>
+        <button class="paynow">Pay Now</button>
+    </div>
   `;
 
   const navbarContainer = document.querySelector(".scroll1");
@@ -16,15 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     navbarContainer.innerHTML = navbar;
   }
 
-
-
-
   let storedItemsArray = JSON.parse(localStorage.getItem("itemsArray")) || [];
-  console.log(storedItemsArray);
   let storedTotal = parseFloat(localStorage.getItem("total")) || 0;
   let storedQuantity = JSON.parse(localStorage.getItem("counts")) || [];
 
-  console.log(storedQuantity);
   let se = document.getElementById('amm');
   se.textContent = storedTotal;
   const cardContainer = document.getElementById('container');
@@ -38,10 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     storedItemsArray.forEach(item => {
       const { name, price, img } = item;
-      const quantity = storedQuantity[name] || 0; // Get the quantity for the specific item
- if (quantity === 0) {
-      return;
-    }
+      const quantity = storedQuantity[name] || 0;
+
+      // Skip items with quantity 0
+      if (quantity === 0) {
+        return;
+      }
+
       // Add the item to the map
       itemMap.set(name, {
         CountQuantity: quantity, // Use quantity for the specific item
@@ -69,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const cartItem3 = document.createElement('div');
       cartItem3.classList.add('div9');
-      cartItem3.textContent = item.price + "  X" + item.CountQuantity; // Display the exact quantity for the specific item
+      cartItem3.textContent = item.price + " X " + item.CountQuantity; // Display the exact quantity for the specific item
     
       const cartItem5 = document.createElement('div');
       cartItem5.classList.add('div10');
@@ -81,19 +76,34 @@ document.addEventListener("DOMContentLoaded", function () {
       imageElement.style.marginTop = '2%';
       imageElement.style.borderRadius = '10%';
 
-      cartItem5.appendChild(imageElement);
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'X';
+      deleteButton.classList.add('delete-btn');
+      deleteButton.addEventListener('click', () => handleDelete(item.name, item.price));
 
+      cartItem5.appendChild(imageElement);
       cartItem4.appendChild(cartItem);
       cartItem4.appendChild(cartItem3);
+      cartItem4.appendChild(deleteButton);
 
       cartItem7.appendChild(cartItem5);
       cartItem7.appendChild(cartItem4);
 
       cardContainer.appendChild(cartItem7);
     });
+  }
 
-    // Update the local storage with the cleared quantity information
-    localStorage.clear();
+  function handleDelete(itemName, itemPrice) {
+    // Implement logic to handle the delete button click
+    // This logic should decrease the quantity or remove the item if quantity is zero
+    // Update total price, quantity, and re-render the cart
+    if (storedQuantity[itemName] > 0) {
+      storedQuantity[itemName]--;
+      storedTotal -= itemPrice;
+      se.textContent = storedTotal;
+    }
+
+    showCartDetails();
   }
 
   showCartDetails();
