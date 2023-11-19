@@ -560,6 +560,13 @@ a {
 a:hover {
     padding-bottom: 10px;
     border-bottom: 4px solid white;
+    /* border-radius: 10px; */
+    /* background-color: transparent; */
+    color: white;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    /* height: 40px;
+    width: 110px; */
+
 
 }
 
