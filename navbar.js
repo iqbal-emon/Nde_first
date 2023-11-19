@@ -100,36 +100,36 @@ var carouselElement1 = document.getElementById("first");
   carouselElement1.appendChild(carouselElement);
 
     // Your card data here
-   const cardData = [
+  const cardData = [
   {
     backgroundImage: './image/card/shoe1.jpg',
-    name: 'Men first shirt',
-    price:'3000$'
+    name: 'Shoe',
+    price:'4000$'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men second shirt',
+    name: ' T-shirt',
     price:'3000$'
   },
   {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men third shirt',
-    price:'3000$'
+    backgroundImage: './image/card/hoodie.jpg',
+    name: 'Hoodie',
+    price:'4000$'
     },
     {
        backgroundImage: './image/card/shoe2.jpg',
-    name: 'Men fourth shirt',
+    name: 'Girl shoe',
     price:'3000$'
     },
      {
-    backgroundImage: './image/card/shoe1.jpg',
-   name: 'Men fifth shirt',
-    price:'3000$'
+    backgroundImage: './image/card/winter.jpg',
+   name: 'Boys Winter Cloth',
+    price:'2000$'
   },
   {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men sixth shirt',
-    price:'3000$'
+    backgroundImage: './image/card/Pants.jpg',
+    name: 'Men Pants ',
+    price:'2000$'
   },
   {
     backgroundImage: './image/card/tshirt.jpg',
@@ -137,13 +137,13 @@ var carouselElement1 = document.getElementById("first");
     price:'3000$'
     },
     {
-       backgroundImage: './image/card/shoe2.jpg',
-    name: 'Men eighten shirt',
-    price:'3000$'
+       backgroundImage: './image/card/Denim (1).jpg',
+    name: 'Men Denim',
+    price:'2000$'
     },
      {
-    backgroundImage: './image/card/shoe1.jpg',
-    name: 'Men fourthlast shirt',
+    backgroundImage: './image/card/Child.jpg',
+    name: 'Child Dress',
     price:'3000$'
   },
   {
@@ -152,18 +152,17 @@ var carouselElement1 = document.getElementById("first");
     price:'3000$'
   },
   {
-    backgroundImage: './image/card/tshirt.jpg',
-    name: 'Men secondlast shirt',
-    price:'3000$'
+    backgroundImage: './image/card/Girls Cap (1).jpg',
+    name: 'Girls Cap',
+    price:'1000$'
     },
     {
-       backgroundImage: './image/card/shoe2.jpg',
-    name: 'Men last shirt',
-    price:'3000$'
+       backgroundImage: './image/card/Boys.jpg',
+    name: 'Men Cap',
+    price:'1000$'
   }
   
 ];
-
   
   // Function to filter names
 function filterNames() {
