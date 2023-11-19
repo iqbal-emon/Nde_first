@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <a id="navbar-link5" href="#container3">BLOG</a>
             </div>
             <div class="navbar3">
-                <input type="text" id="searchInput" style="margin-left: 10px;  border-radius: 10px;">
+                <input placeholder="Search" type="text" id="searchInput" style="margin-left: 10px;  border-radius: 10px;">
 
 <button id="search1"></button>
                 
@@ -166,7 +166,7 @@ var carouselElement1 = document.getElementById("first");
   
   // Function to filter names
 function filterNames() {
-    const input = document.getElementById('searchInput');
+  const input = document.getElementById('searchInput');
     const filter = input.value.toUpperCase();
     const cards = document.querySelectorAll('.card');
     const containerDiv = document.getElementById('container'); // Replace 'container' with your actual container div ID

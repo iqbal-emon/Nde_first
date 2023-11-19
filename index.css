@@ -266,7 +266,18 @@
 #searchInput {
     position: relative;
     border: none;
+
 }
+
+#searchInput::placeholder {
+    text-align: center;
+    padding-left: 70%;
+    /* Adjust the value based on the desired centering */
+    transform: translateX(-50%);
+}
+
+
+
 
 #search1 {
     color: #fff;
@@ -404,8 +415,11 @@
 }
 
 .titie {
-    margin-left: -70px;
-    margin-right: 120px;
+    padding-right: 110px;
+    margin-left: -80px;
+    /* margin-right: 0; */
+    margin-right: -10%;
+    margin-right: 80px;
     margin-top: 20px;
     background-color: rgb(85, 183, 197);
     height: 60px;
@@ -476,7 +490,7 @@ h2 {
     text-align: center;
     padding-top: 1px;
     /* margin-right: 120px; */
-    margin-left: -70px;
+    margin-left: -120px;
     border-radius: 10px;
 }
 
@@ -484,17 +498,22 @@ h2 {
     margin-left: 120px;
 }
 
+#le {
+    margin-left: -100px;
+}
+
 .allpro {
     padding-top: -15px;
-    /* margin-right: 120px; */
+    /* margin-left: -150px; */
     /* margin-left: -50px; */
-    margin-left: -70px;
+    /* margin-left: -20px; */
     font-size: 25px;
 
 }
 
 #allproduct {
     border-radius: 10px;
+    margin-right: -200px;
 }
 
 footer {
@@ -508,7 +527,7 @@ footer {
     text-align: start;
     /* padding-left: 40px; */
     padding-right: 40px;
-    /* width: 100%; */
+    margin-right: -10px;
     margin-left: -10px;
     margin-bottom: -10px;
 }
@@ -572,6 +591,8 @@ a:hover {
 
 #allproduct {
     width: 100%;
+    margin-left: -110px;
+    margin-right: -150px;
 }
 
 #ca {
@@ -595,7 +616,7 @@ a:hover {
 
 
 .container5 {
-    margin-left: -70px;
+    margin-left: -110px;
     margin-top: 20px;
     background-color: rgb(85, 183, 197);
     height: 60px;
