@@ -107,4 +107,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   showCartDetails();
+  localStorage.clear();
 });

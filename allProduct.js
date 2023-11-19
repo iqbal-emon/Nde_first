@@ -222,7 +222,7 @@ cardData.forEach((data) => {
   subtitle.textContent = data.price;
   const btn12 = document.createElement('button');
   btn12.classList.add('btn12');
-  btn12.textContent = 'add to cart';
+  btn12.textContent = 'Add to cart';
   btn12.addEventListener('click', () => {
     count++;
     counts[data.name] = (counts[data.name] || 0) + 1;

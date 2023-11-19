@@ -1096,7 +1096,7 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     height: 40px;
     width: 110px;
-
+    font-weight: bold;
     background-color: rgb(85, 183, 197);
     color: white;
     /* font-weight: bold; */
@@ -1106,6 +1106,7 @@ a:hover {
     background-color: white;
     color: rgb(85, 183, 197);
     border-radius: 10px;
+    font-weight: bold;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 
     /* color: rgb(132, 109, 26); */
