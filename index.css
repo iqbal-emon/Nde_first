@@ -554,8 +554,9 @@ a:hover {
 }
 
 #Count {
+    z-index: 100;
     position: absolute;
-    top: 0;
+    top: 6px;
     left: 93.0%;
     min-width: 14px;
     line-height: 14px;
