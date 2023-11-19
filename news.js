@@ -27,18 +27,20 @@ const container3 = document.getElementById('container3');
 const cardData3 = [
   {
     backgroundImage: './image/card/shoe1.jpg',
-     title: 'Men first Shirt',
-        subtitle: '2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
+    title: 'Men Shoe',
+    subtitle: 'Climatic evidence suggests that people were probably protecting their feet from frigid conditions by about 50,000 years ago. Changes in foot shape and toe strength indicate that people were using footwear with substantial soles by about 40,000 years ago. However, the earliest examples of actual footwear, a pair of sandals found in California (U.S.), date to only about 9,000 years ago.'
+  
+  },
+        {
+    backgroundImage: './image/card/tshirt.jpg',
+    title: 'T-Shirt',
+     subtitle: 'I get it. I’m a woman, usually size XS, so anything unisex usually doesn’t work for me. But these do like genuinely good on women, and I also have some a size up which are nice to wear for a looser fit too.'
+
   },
   {
-    backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men second Shirt',
-     subtitle: '2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
-  },
-  {
-    backgroundImage: './image/card/tshirt.jpg',
-    title: 'last Casual Shirt',
-   subtitle: '3Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque' 
+    backgroundImage: './image/card/Girls Cap (1).jpg',
+    title: 'Girls Cap',
+   subtitle: 'The front of the hat typically displays a design or a logo (historically, usually only a sports team, namely a baseball team, or names of relevant companies' 
   }
 ];
 

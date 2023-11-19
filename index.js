@@ -9,8 +9,7 @@ const cardData3 = [
   {
     backgroundImage: './image/card/tshirt.jpg',
     title: 'Men second Shirt',
-     subtitle: '2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae dignissim risus. Donec cursus fringilla felis congue venenatis. Donec in facilisis eros. Ut diam neque'
-  },
+     subtitle: 'Very few people in the world can say they don’t own a single t-shirt. It is one of those core items that is worn by men and women alike and serves as a blank canvas both for the wearer and the designer. As wearers, we love them for their versatility, comfort, and (usually) low price point. Put yourself in the shoes (or the t-shirt) of your customer for a second: there is nothing like your favorite t-shirt, that makes you feel comfortable and secure, particularly on those days when just picking an outfit feels daunting. Ideally, youd want to be the creator that perfect tee that people keep coming back to.' },
   {
     backgroundImage: './image/card/tshirt.jpg',
     title: 'last Casual Shirt',

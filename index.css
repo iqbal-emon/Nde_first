@@ -7,11 +7,14 @@
     justify-content: space-around;
     align-items: center;
     background-color: rgb(85, 183, 197);
-    padding: 10px 30px;
+    padding: 20px 30px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     height: 40px;
     width: 96.5%;
     margin-left: -10px;
+    width: 100%;
+    margin-left: -10px;
+    margin-right: -10px;
     /* border-top-right-radius: 10px; */
     /* border-radius: 10px;
      */
@@ -76,7 +79,7 @@
 .style1 {
     /* margin-left: 150px; */
     position: relative;
-
+    border-radius: 10px;
 
 
 
@@ -496,14 +499,17 @@ h2 {
 footer {
     margin-top: 20px;
     background-color: rgb(85, 183, 197);
-    width: auto;
-    height: full;
+    /* width: auto; */
+    /* height: full; */
     color: white;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     text-align: start;
-    padding-left: 40px;
+    /* padding-left: 40px; */
     padding-right: 40px;
+    /* width: 100%; */
+    margin-left: -10px;
+    margin-bottom: -10px;
 }
 
 .extra {
@@ -549,9 +555,8 @@ a:hover {
 
 #Count {
     position: absolute;
-    top: -10px;
-    margin-left: 14%;
-    /* right: 11.2%; */
+    top: 0;
+    left: 93.0%;
     min-width: 14px;
     line-height: 14px;
     border-radius: 50%;
@@ -884,6 +889,7 @@ a:hover {
     height: 100%;
     opacity: 0;
     transition: 0.3s;
+
 }
 
 #card5:hover::before {
@@ -1175,7 +1181,13 @@ a:hover {
 
 
 @media screen and (min-width: 2000px) {
+
     body {
+
+        #Count {
+            margin-right: auto;
+        }
+
         /* background-color: black; */
 
         .special {
@@ -1274,10 +1286,7 @@ a:hover {
             position: relative;
         }
 
-        /* 
-        #Count {
-            margin-left: 8%;
-        } */
+
 
         #ambition2 {
             margin-left: 20%;

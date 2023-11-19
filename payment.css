@@ -41,11 +41,27 @@
     /* Space between grid items */
     padding: 20px;
 
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+    /* Adjust the number of columns as per your design */
+    gap: 20px;
+    /* Space between grid items */
+    /* padding: 20px; */
+
 }
 
 .div1 {
+    padding-top: 20px;
+    width: 70%;
+}
+
+
+
+
+
+.div1 {
     margin-left: 300px;
-    margin-top: 15px;
+    /* margin-top: 6px; */
     /* width: 50px; */
     /* color: orangered; */
 }
@@ -57,17 +73,33 @@
 
 }
 
+#footer1 {
+    height: full;
+}
+
 @media screen and (min-width: 2000px) {
     .di {
-        margin-bottom: 20%;
+        right: 5%;
+        top: 20%;
+        border: 2px solid white;
+        margin-left: 50px;
+        height: 40%;
+        width: 20%;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        background-color: rgb(85, 183, 197);
+        color: white;
+        position: fixed;
 
+    }
+
+    #footer1 {
+        position: fixed;
+        margin-top: 200px;
     }
 }
 
-#footer1 {
-    /* margin-top: 20%; */
-    /* position:fle; */
-}
 
 .div15 {
     color: orangered;

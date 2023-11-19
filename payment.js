@@ -39,7 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     storedItemsArray.forEach(item => {
       const { name, price, img } = item;
       const quantity = storedQuantity[name] || 0; // Get the quantity for the specific item
-
+ if (quantity === 0) {
+      return;
+    }
       // Add the item to the map
       itemMap.set(name, {
         CountQuantity: quantity, // Use quantity for the specific item
@@ -67,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const cartItem3 = document.createElement('div');
       cartItem3.classList.add('div9');
-      cartItem3.textContent = item.price + "X " + item.CountQuantity; // Display the exact quantity for the specific item
+      cartItem3.textContent = item.price + "  X" + item.CountQuantity; // Display the exact quantity for the specific item
     
       const cartItem5 = document.createElement('div');
       cartItem5.classList.add('div10');

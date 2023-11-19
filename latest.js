@@ -37,14 +37,14 @@ const cardData2 = [
     subtitle: '2000$'
   },
   {
-    backgroundImage: './image/card/tshirt.jpg',
-    title: 'Men Casual Shirt',
-    subtitle: '2000$'
+    backgroundImage: './image/card/hoodie.jpg',
+    title: 'Hoodie',
+    subtitle: '4000$'
   },
   {
     backgroundImage: './image/card/shoe2.jpg',
-    title: 'Beg',
-    subtitle: '2000$'
+    title: 'Girl Shoe',
+    subtitle: '3000$'
   }
 ];
   container2.appendChild(latestDiv);
