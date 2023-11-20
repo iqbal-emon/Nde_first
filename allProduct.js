@@ -204,7 +204,7 @@ function updateLocalStorage() {
   // Update local storage with the current counts
   localStorage.setItem('counts', JSON.stringify(counts));
 }
-
+// start there
 cardData.forEach((data) => {
   const card = document.createElement('div');
   card.classList.add('card');

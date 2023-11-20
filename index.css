@@ -596,18 +596,18 @@ a {
     color: white;
 }
 
-a:hover {
+/* a:hover {
     padding-bottom: 10px;
-    border-bottom: 4px solid white;
-    /* border-radius: 10px; */
-    /* background-color: transparent; */
-    color: white;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    /* height: 40px;
+    border-bottom: 4px solid white; */
+/* border-radius: 10px; */
+/* background-color: transparent; */
+/* color: white; */
+/* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+/* height: 40px;
     width: 110px; */
 
 
-}
+/* } */
 
 .navbar3 {
     display: flex;
@@ -1323,7 +1323,7 @@ body {
     }
 
     .lastest {
-        margin-right: 500px;
+        /* margin-right: 400px; */
     }
 
     #container3 {
@@ -1333,5 +1333,8 @@ body {
 
     }
 
+    #Count {
+        margin-left: -150px;
+    }
 
 }

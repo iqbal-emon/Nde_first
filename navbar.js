@@ -182,7 +182,7 @@ function filterNames() {
 
         if (cardName.includes(filter) || filter === '') {
             card.style.display = 'inline-block';
-            containerDiv.scrollIntoView({ block: 'center', inline: 'center' });
+            containerDiv.scrollIntoView({ });
         } else {
             card.style.display = 'none';
         }
