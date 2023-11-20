@@ -49,8 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span>FOR</span>
                     <span>YOU!</span>
                 </h1>
-                <h3  id="monospace">Trending from men and women style collection</h3>
-
+                <div><h3  id="monospace">
+                Trending from men and women style collection</h3>
+</div>
                 <div class="btn">
                     <button class="btn1">SHOP WOMEN'S</button>
                     <button class="btn2">SHOP MEN'S</button>
@@ -74,11 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
         // Reset the color of all links to white
       navbarLinks.forEach(link => {
        
-          link.style.color = 'white';
+          // link.style.color = 'white';
       link.style.borderBottom = 'none';
           
         });
-
+event.target.style.paddingBottom = '10px';
         // Set the color of the clicked link to blue
       event.target.style.borderBottom = '4px solid white';
     };
