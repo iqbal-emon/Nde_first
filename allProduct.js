@@ -124,6 +124,7 @@ function showCartDetails() {
 
     const cartItem4 = document.createElement('div');
     cartItem4.classList.add('div8');
+    cartItem4.style.width = '100px';
     const cartItem7 = document.createElement('div');
     cartItem7.classList.add('div11');
     const cartItem = document.createElement('div');
@@ -203,7 +204,7 @@ function updateLocalStorage() {
   // Update local storage with the current counts
   localStorage.setItem('counts', JSON.stringify(counts));
 }
-
+// start there
 cardData.forEach((data) => {
   const card = document.createElement('div');
   card.classList.add('card');
@@ -222,7 +223,7 @@ cardData.forEach((data) => {
   subtitle.textContent = data.price;
   const btn12 = document.createElement('button');
   btn12.classList.add('btn12');
-  btn12.textContent = 'add to cart';
+  btn12.textContent = 'Add to cart';
   btn12.addEventListener('click', () => {
     count++;
     counts[data.name] = (counts[data.name] || 0) + 1;

@@ -1,5 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = `
+    <button id="newButton">New</button>
+    <div id="popupOverlay" class="overlay">
+  <!-- Form container -->
+  <div class="form-container">
+    <!-- Close button -->
+    <button id="close-btn">X</button>
+
+    <!-- Form content -->
+    <form id="myForm">
+      <label id="textt" for="image">Image:</label>
+      <input type="file" id="image" class="form-input" required>
+
+      <label id="textt" for="text1">Title:</label>
+      <input type="text" id="text1" class="form-input" required>
+
+      <label id="textt" for="text2">Blog:</label>
+      <textarea  type="text" id="text2" class="form-input" required></textarea>
+
+      <button type="button" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
     <!-- Your navbar HTML goes here -->
     `;
   
@@ -15,6 +37,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     outerDiv.appendChild(h2Element);
     navbarContainer.appendChild(outerDiv);
+
+ var button12 = document.getElementById("newButton");
+
+    // Add a click event listener to the button
+    button12.addEventListener("click", function() {
+        // Code to be executed when the button is clicked
+       document.getElementById('popupOverlay').style.display = 'flex';
+    });
+    var closeBtn = document.getElementById("close-btn");
+
+    // Add a click event listener to the button
+    closeBtn.addEventListener("click", function() {
+        // Code to be executed when the button is clicked
+       document.getElementById('popupOverlay').style.display = 'none';
+    });
+
+
+
+
+
+
+   
+
+
+
+
 
     const container3 = document.getElementById('container3');
     const cardData3 = [
@@ -34,6 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
             subtitle: 'The front of the hat typically displays a design or a logo (historically, usually only a sports team, namely a baseball team, or names of relevant companies)'
         }
     ];
+
+
 
     cardData3.forEach((data, index) => {
         const card = document.createElement('div');

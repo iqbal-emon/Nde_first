@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const navbar = ` 
-    <div id="container"></div>
-    <div class="di">
-        <h1>Amount</h1>
-        <h1 id="amm"></h1>
-        <button class="paynow">Pay Now</button>
-    </div>
-  `;
+  const navbar = `
+  <div id="container"></div>
+  <div class="di">
+  <h1>Amount</h1>
+  <h1 id="amm"></h1>
+  <button class="paynow">Pay Now</button>
+  </div>
+  
+`;
 
   const navbarContainer = document.querySelector(".scroll1");
   if (navbarContainer) {
@@ -77,15 +78,21 @@ document.addEventListener("DOMContentLoaded", function () {
       imageElement.style.borderRadius = '10%';
 
       const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'X';
+      deleteButton.textContent = '-';
       deleteButton.classList.add('delete-btn');
       deleteButton.addEventListener('click', () => handleDelete(item.name, item.price));
+ const IncreaButton = document.createElement('button');
+      IncreaButton.textContent = '+';
+      IncreaButton.classList.add('delete-btn1');
+      IncreaButton.addEventListener('click', () => handleIncrease(item.name, item.price));
+
+
 
       cartItem5.appendChild(imageElement);
       cartItem4.appendChild(cartItem);
       cartItem4.appendChild(cartItem3);
       cartItem4.appendChild(deleteButton);
-
+cartItem4.appendChild(IncreaButton);
       cartItem7.appendChild(cartItem5);
       cartItem7.appendChild(cartItem4);
 
@@ -105,6 +112,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     showCartDetails();
   }
+ function handleIncrease(itemName, itemPrice) {
+    // Implement logic to handle the delete button click
+    // This logic should decrease the quantity or remove the item if quantity is zero
+    // Update total price, quantity, and re-render the cart
+    if (storedQuantity[itemName] > 0) {
+      storedQuantity[itemName]++;
+      storedTotal += itemPrice;
+      se.textContent = storedTotal;
+    }
+
+    showCartDetails();
+  }
+
+
+
+
 
   showCartDetails();
+  localStorage.clear();
 });
