@@ -3,7 +3,7 @@
     position: fixed;
     /* Make the navbar fixed */
     top: 0;
-    z-index: 2000;
+    z-index: 6000;
     justify-content: space-around;
     align-items: center;
     background-color: rgb(85, 183, 197);
@@ -534,6 +534,7 @@ h2 {
 }
 
 .allpro {
+    position: relative;
     /* padding-top: -10px; */
     /* margin-left: -150px; */
     /* margin-left: -50px; */
@@ -544,7 +545,7 @@ h2 {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 1.5);
     margin-top: -20px;
     color: white !important;
-    z-index: 6000;
+    z-index: 2000;
 
 }
 
@@ -776,6 +777,8 @@ body {
         opacity: 0;
         transform: translateX(1em);
     }
+
+
 
     100% {
         opacity: 1;
@@ -1187,6 +1190,77 @@ body {
     box-sizing: border-box;
 }
 
+.bubbles img {
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+
+        opacity: 1;
+    }
+
+    70% {
+
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+
+
+}
+
+.bubbles img:nth-child(1) {
+    animation-duration: 2s;
+    width: 25px;
+}
+
+.bubbles img:nth-child(2) {
+    animation-duration: 1s;
+}
+
+.bubbles img:nth-child(3) {
+    animation-duration: 3s;
+    width: 25px;
+}
+
+.bubbles img:nth-child(4) {
+    animation-duration: 4.5s;
+}
+
+.bubbles img:nth-child(5) {
+    animation-duration: 3s;
+}
+
+.bubbles img:nth-child(6) {
+    animation-duration: 6s;
+    width: 20px;
+}
+
+.bubbles img:nth-child(7) {
+    animation-duration: 7s;
+    width: 35px;
+}
+
+
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    border: -70px;
+}
+
 /* .form-input:hover {
     border: none;
 } */
@@ -1230,22 +1304,29 @@ body {
 }
 
 
-#newButton {
-    margin-left: 90%;
+#newButton1 {
+    right: 0;
+    /* top: 0; */
+    margin-right: 100px;
     margin-top: 20px;
-    height: 50px;
+    /* margin-left: 90%;
+    margin-top: 20px; */
+    /* margin-bottom: -20px; */
+    height: 40px;
     width: 80px;
     border-radius: 20px;
     /* border: 2px solid white; */
     border: none;
     background-color: rgb(85, 183, 197);
-    z-index: 2000;
+    z-index: 4000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1.2);
     color: white;
     font-weight: bolder;
+    position: absolute;
+    justify-content: end;
 }
 
-#newButton:hover {
+#newButton1:hover {
     background-color: white;
     color: rgb(85, 183, 197);
 }

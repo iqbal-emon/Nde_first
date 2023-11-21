@@ -35,6 +35,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button class="btn1">SHOP WOMEN'S</button>
                 <button class="btn2">SHOP MEN'S</button>
             </div>
+
+<div class="bubbles">
+  <img src="./image/bubble.png">
+  <img src="./image/bubble.png">
+  <img src="./image/bubble.png">
+  <img src="./image/bubble.png">
+  <img src="./image/bubble.png">
+  <img src="./image/bubble.png">
+  <img src="./image/bubble.png">
+
+
+          </div>
+
         </div>
   
       </div>
@@ -56,8 +69,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     <button class="btn1">SHOP WOMEN'S</button>
                     <button class="btn2">SHOP MEN'S</button>
                 </div>
+        
+
+
             </div>
         </div>
+
+
 
     </div>
  `;
@@ -184,7 +202,8 @@ function filterNames() {
             card.style.display = 'inline-block';
             containerDiv.scrollIntoView({ });
         } else {
-            card.style.display = 'none';
+          card.style.display = 'none';
+            containerDiv.scrollIntoView({ });
         }
     });
 

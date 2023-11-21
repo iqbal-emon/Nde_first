@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = `
-    <button id="newButton">New</button>
+    <button id="newButton1">New</button>
     <div id="popupOverlay" class="overlay">
   <!-- Form container -->
   <div class="form-container">
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     outerDiv.appendChild(h2Element);
     navbarContainer.appendChild(outerDiv);
 
- var button12 = document.getElementById("newButton");
+ var button12 = document.getElementById("newButton1");
 
     // Add a click event listener to the button
     button12.addEventListener("click", function() {
