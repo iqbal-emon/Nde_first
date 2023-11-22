@@ -9,14 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <!-- Form content -->
     <form id="myForm">
-      <label id="textt" for="image">Image:</label>
-      <input type="file" id="image" class="form-input" required>
+      <div class="upp">
+<div class="t1">
 
-      <label id="textt" for="text1">Title:</label>
-      <input type="text" id="text1" class="form-input" required>
+<label id="textt" for="text1">Title:</label>
+<input type="text" id="text1" class="form-input" required>
+<label id="textt" for="image">Image:</label>
+      <input type="file" id="image"  required>
+</div>
 
-      <label id="textt" for="text2">Blog:</label>
-      <textarea  type="text" id="text2" class="form-input" required></textarea>
+    <div class="down2">
+    <label id="tex3"  >Blog:</label>
+        <textarea id="tt1"  type="text" required></textarea>
+    </div>
+   </div>
 
       <button type="button" class="submit-btn">Submit</button>
     </form>

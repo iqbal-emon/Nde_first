@@ -1176,7 +1176,7 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.5);
     text-align: center;
 }
 
@@ -1184,10 +1184,37 @@ body {
 
 /* Style for the form fields */
 .form-input {
-    margin: 10px 0;
-    width: 100%;
-    padding: 8px;
+    margin: 10px;
+    width: 40%;
+    padding: 3px;
+    border-radius: 10px;
     box-sizing: border-box;
+    border: 1px solid black;
+
+}
+
+
+#tex3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: larger;
+}
+
+#myForm {
+    width: 800px;
+}
+
+#tt1 {
+    padding-bottom: 40px;
+}
+
+
+
+.down2 {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .bubbles img {
@@ -1274,12 +1301,16 @@ body {
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    margin-bottom: 20px;
 
 
 }
 
 #textt {
     font-weight: bold;
+    font-size: larger;
+    margin-right: 10px;
+    margin-left: 30px;
 }
 
 #close-btn:hover {
@@ -1290,6 +1321,10 @@ body {
 
 }
 
+.t1 {
+    display: flex;
+    align-items: center;
+}
 
 
 
@@ -1332,6 +1367,10 @@ body {
 }
 
 
+/* #myForm {
+    display: flex;
+    flex-direction: column;
+} */
 
 
 .navbar-link {
