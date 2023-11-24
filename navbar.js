@@ -1,28 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const navbar = `<nav class="navbar">
-            <div class="navbar2">
-                <a id="navbar-link1" href="#ca">HOME</a>
-                <a id="navbar-link2" href="#allproduct">PRODUCTS</a>
-                <a id="navbar-link3" href="#le">NEW</a>
-                <a id="navbar-link4" href="#container4">RECENT</a>
-                <a id="navbar-link5" href="#container3">BLOG</a>
-            </div>
-            <div class="navbar3">
-                <input placeholder="Search" type="text" id="searchInput" style="margin-left: 10px;  border-radius: 10px;">
+    const navbar = ` <nav class="navbar">
+        <div class="navbar2">
+            <a id="navbar-link1" href="#ca">HOME</a>
+            <a id="navbar-link2" href="#allproduct">PRODUCTS</a>
+            <a id="navbar-link3" href="#le">NEW</a>
+            <a id="navbar-link4" href="#container4">RECENT</a>
+            <a id="navbar-link5" href="#container3">BLOG</a>
+        </div>
+        <div class="navbar3">
+            <input placeholder="Search" type="text" id="searchInput" style="margin-left: 10px;  border-radius: 10px;">
+            <button id="search1"></button>
+            <div id="searchResults"></div>
+            <p id="Count"></p>
+            <img id="cartbutton" class="images" src="./image/cart.png" alt="" width="25" height="25">
+            <div class="dropdown-content" id="myDropdown"></div>
+        </div>
+    </nav>
 
-<button id="search1"></button>
-                
-                <div id="searchResults"></div>
-                <p id="Count"></p>
-                <img id="cartbutton" class="images" src="./image/cart.png" alt="" width="25" height="25">
-                <div class="dropdown-content" id="myDropdown"></div>
-            </div>
-
-        </nav>
-        <div class="Carousel" id="ca">
-        <img class="img1"  width="100%" height="600" alt="">
+    <div class="Carousel" id="ca">
+        <img class="img1" width="100%" height="600" alt="">
         <div class="text-caro1">
-            <h2 class="allpro" id="monospace">New Inpsiration 2023</h2>
+            <h2 class="allpro" id="monospace">New Inspiration 2023</h2>
             <h1 class="word-animation">
                 <span>CLOTHING</span>
                 <span>MADE</span>
@@ -36,48 +34,38 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button class="btn2">SHOP MEN'S</button>
             </div>
 
-<div class="bubbles">
-  <img src="./image/bubble.png">
-  <img src="./image/bubble.png">
-  <img src="./image/bubble.png">
-  <img src="./image/bubble.png">
-  <img src="./image/bubble.png">
-  <img src="./image/bubble.png">
-  <img src="./image/bubble.png">
-
-
-          </div>
-
+            <div class="bubbles">
+                <img src="./image/bubble.png">
+                <img src="./image/bubble.png">
+                <img src="./image/bubble.png">
+                <img src="./image/bubble.png">
+                <img src="./image/bubble.png">
+                <img src="./image/bubble.png">
+                <img src="./image/bubble.png">
+            </div>
         </div>
-  
-      </div>
-       <div id="first">
+    </div>
+
+    <div id="first">
         <div class="Carousel" id="ca">
-            <img class="img1"  width="97%" height="600" alt="">
+            <img class="img1" width="97%" height="600" alt="">
             <div class="text-caro1">
-                <h2  id="monospace">New Inpsiration 2023</h2>
+                <h2 id="monospace">New Inspiration 2023</h2>
                 <h1 class="word-animation">
                     <span>CLOTHING</span>
                     <span>MADE</span>
                     <span>FOR</span>
                     <span>YOU!</span>
                 </h1>
-                <div><h3  id="monospace">
-                Trending from men and women style collection</h3>
-</div>
+                <div><h3 id="monospace">Trending from men and women style collection</h3></div>
                 <div class="btn">
                     <button class="btn1">SHOP WOMEN'S</button>
                     <button class="btn2">SHOP MEN'S</button>
                 </div>
-        
-
-
             </div>
         </div>
-
-
-
     </div>
+    
  `;
 
     const navbarContainer = document.getElementById("nav1");
