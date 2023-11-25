@@ -1386,7 +1386,9 @@ label {
     margin-top: 30px;
     margin-left: 20px;
 }
-
+.carde01234{
+    display: inline;
+}
 
 /* Style for the blog label and textarea */
 #blogLabel {

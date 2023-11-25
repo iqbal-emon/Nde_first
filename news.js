@@ -95,11 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
     //         subtitle: 'The front of the hat typically displays a design or a logo (historically, usually only a sports team, namely a baseball team, or names of relevant companies)'
     //     }
     // ];
+    const card0123 = document.createElement('div');
+                    
+                card0123.classList.add('carde01234');
     var submitbtn = document.querySelector(".submit-btn");
 
     submitbtn.addEventListener('click', function (event) {
         event.preventDefault();
-        
+        card0123.innerHTML=null;
         document.getElementById('popupOverlay').style.display = 'none';
     
         // Get form data
@@ -207,15 +210,40 @@ document.addEventListener("DOMContentLoaded", function () {
                     card.appendChild(text);
                     card.appendChild(fullText);
                     card.appendChild(button);
-                    
-                    container3.appendChild(card);
+                    card0123.appendChild(card);
+                    container3.appendChild(card0123);
+                    const observerOptions = {
+                        root: null,
+                        rootMargin: '0px',
+                        threshold: 0.5,
+                    };
+                
+                    const observer = new IntersectionObserver((entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.transition = 'opacity 1s, transform 1s';
+                                entry.target.style.opacity = 1;
+                                entry.target.style.transform = 'translateX(0)';
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, observerOptions);
+                
+                    card.style.opacity = 0;
+                    card.style.transform = 'translateX(60%)';
+                
+                    setTimeout(() => {
+                        observer.observe(card);
+                    }, 900 * index);
                 });
             })
             .catch(error => {
                 // Handle errors
                 console.error('GetDetails Error:', error);
             });
+           
     }
+ 
 });
 
 
@@ -264,33 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //     container3.appendChild(card);
     // });
         // Apply styles with intersection observer
-//         const observerOptions = {
-//             root: null,
-//             rootMargin: '0px',
-//             threshold: 0.5,
-//         };
-
-//         const observer = new IntersectionObserver((entries, observer) => {
-//             entries.forEach((entry) => {
-//                 if (entry.isIntersecting) {
-//                     entry.target.style.transition = 'opacity 1s, transform 1s';
-//                     entry.target.style.opacity = 1;
-//                     entry.target.style.transform = 'translateX(0)';
-//                     observer.unobserve(entry.target);
-//                 }
-//             });
-//         }, observerOptions);
-
-//         card.style.opacity = 0;
-//         card.style.transform = 'translateX(60%)';
-
-//         setTimeout(() => {
-//             observer.observe(card);
-//         }, 900 * index);
-//     });
+      
+   
 
 
-
-
-//     }
-// });
