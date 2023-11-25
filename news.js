@@ -210,8 +210,8 @@ document.addEventListener("DOMContentLoaded", function () {
     
                     const text = document.createElement('p');
                     text.classList.add('text');
-                    // text.textContent = data1.subtitle.substring(0, 80);
-    
+                    
+                    text.textContent = data1.textField2.substring(0, 60);
                     const fullText = document.createElement('p');
                     fullText.classList.add('subtitle');
                     fullText.style.display = 'none';
@@ -220,6 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const button = document.createElement('button');
                     button.textContent = 'Read More';
                     button.classList.add('btn11');
+                    
                     button.addEventListener('click', () => {
                         if (fullText.style.display === 'none') {
                             text.style.display = 'none';
