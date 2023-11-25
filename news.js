@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <button id="close-btn">X</button>
 
     <!-- Form content -->
-    <form id="myForm"  enctype="multipart/form-data">
+    <form id="myForm" name="myform"  enctype="multipart/form-data">
 
     <div class="upp">
         <div class="t1">
@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function () {
     navbarContainer.innerHTML = navbar;
 
     let imageInput = document.getElementById("TextField2");
+    const newDiv1 = document.getElementById('newDiv');
         imageInput.addEventListener("change", function () {
-            const newDiv1 = document.getElementById('newDiv');
 
             if (this.files && this.files[0]) {
                 const reader = new FileReader();
@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 card0123.classList.add('carde01234');
     var submitbtn = document.querySelector(".submit-btn");
 
-    submitbtn.addEventListener('click', function (event) {
+    submitbtn.addEventListener('click', function () {
 
-        event.preventDefault();
+       
 
         card0123.innerHTML=null;
         document.getElementById('popupOverlay').style.display = 'none';
@@ -166,6 +166,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Handle errors
                 console.error('Error:', error);
             });
+            document.myform.reset();
+            newDiv1.innerHTML=null;
     });
 
     getAllDetails();

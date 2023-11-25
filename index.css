@@ -1655,5 +1655,8 @@ label {
     #Count {
         margin-left: -150px;
     }
-
+    .di{
+        top: 10%;
+        height: 20%;
+    }
 }
