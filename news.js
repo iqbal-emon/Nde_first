@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <button id="close-btn">X</button>
 
     <!-- Form content -->
-    <form id="myForm" enctype="multipart/form-data">
+    <form id="myForm"  enctype="multipart/form-data">
 
     <div class="upp">
         <div class="t1">
@@ -25,9 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="down2">
             <label id="blogLabel">Blog:</label>
             <textarea id="TextField3" name="TextField2"  required></textarea>
+            <div id="newDiv">
+        
+            </div>
         </div>
+
+      
         <input type="hidden" id="hiddenInput" name="ImageField1" value="hiii">
         </div>
+
+
+
         <button type="button" class="submit-btn">Submit</button>
 </form>
 
@@ -40,6 +48,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarContainer = document.getElementById("container3");
     navbarContainer.innerHTML = navbar;
 
+    let imageInput = document.getElementById("TextField2");
+        imageInput.addEventListener("change", function () {
+            const newDiv1 = document.getElementById('newDiv');
+
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = (e) => {
+                    newDiv1.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image" style="max-width: 20%; max-height: 100px;">`;
+                };
+
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
     const outerDiv = document.createElement('div');
     outerDiv.classList.add('lastest');
 
@@ -101,7 +123,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var submitbtn = document.querySelector(".submit-btn");
 
     submitbtn.addEventListener('click', function (event) {
+
         event.preventDefault();
+
         card0123.innerHTML=null;
         document.getElementById('popupOverlay').style.display = 'none';
     

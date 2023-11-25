@@ -1204,6 +1204,7 @@ body {
 }
 .upp{
     display: flex;
+    padding-top: -70px;
   
 
 }
@@ -1389,6 +1390,11 @@ label {
 .carde01234{
     display: inline;
 }
+#newDiv{
+    margin-left: -1000px;
+    margin-top: -20px;
+   
+}
 
 /* Style for the blog label and textarea */
 #blogLabel {
@@ -1434,7 +1440,7 @@ label {
 #newButton1 {
     right: 0;
     /* top: 0; */
-    margin-right: 100px;
+    margin-right: 9%;
     margin-top: 20px;
     /* margin-left: 90%;
     margin-top: 20px; */
