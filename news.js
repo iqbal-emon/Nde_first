@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="t1">
 
         <div class="t12> 
-            <h1 class="titileshow"  for="text1">Title:</h1>
-            <input type="text" id="text1" name="TextField1" class="form-input" required>
+             <label class="titileshow" for="text1">Title:</label>
+    <input type="text" id="text1" name="TextField1" class="form-input" required>
             </div>
-            <div class="t123"
+            
             <label class="imag" id="imageLabel" for="TextField2">Image:</label>
             <input type="file" id="TextField2" name="ImageField" required>
-            </div>
+            
         </div>
         <div class="down2">
             <label id="blogLabel">Blog:</label>
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-        <button type="button" class="submit-btn">Submit</button>
+        <button type="submit" class="submit-btn">Submit</button>
 </form>
 
 
@@ -120,12 +120,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const card0123 = document.createElement('div');
                     
                 card0123.classList.add('carde01234');
-    var submitbtn = document.querySelector(".submit-btn");
+                var myForm = document.getElementById("myForm");
 
-    submitbtn.addEventListener('click', function () {
-
-       
-
+                myForm.addEventListener('submit', function (event) {
+                    event.preventDefault();
+// console.log("submitted");
+     
         card0123.innerHTML=null;
         document.getElementById('popupOverlay').style.display = 'none';
     

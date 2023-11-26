@@ -29,7 +29,7 @@
 }
 
 .titileshow{
-    font-weight: bolder;
+    /* font-weight: bolder; */
 }
 .text-caro1 {
     position: absolute;
@@ -231,7 +231,10 @@
 #he {
     opacity: 0.8;
 }
-
+.imag{
+    font-weight: normal !important;
+    
+}
 .feature1 {
     /* background-image: url('./image/card2/fourth.jpg'); */
     background-size: cover;
@@ -1163,7 +1166,7 @@ body {
     /* Change the color for the clicked link */
 }
 .imag{
-    margin-left: -100px;
+    /* margin-left: -20px; */
 }
 
 
