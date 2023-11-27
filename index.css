@@ -44,6 +44,7 @@
 }
 .t1{
     margin-top: 30px;
+    margin-right: 100px;
 }
 .t123{
     /* display: flex; */
@@ -231,10 +232,7 @@
 #he {
     opacity: 0.8;
 }
-.imag{
-    font-weight: normal !important;
-    
-}
+
 .feature1 {
     /* background-image: url('./image/card2/fourth.jpg'); */
     background-size: cover;
@@ -510,6 +508,8 @@ h2 {
     width: 92%;
     padding-bottom: 60px;
     background-color: white;
+    position: relative;
+    
 }
 
 
@@ -538,6 +538,7 @@ h2 {
     padding-bottom: 60px;
     background-color: white;
     padding-left: 60px;
+    
 }
 
 #le {
@@ -1168,8 +1169,44 @@ body {
 .imag{
     /* margin-left: -20px; */
 }
+#leftbtn{
+position: absolute;
+left: 7%;
+margin-top: 20%;
+z-index: 2000;
+color: white;
+font-weight: bolder;
+font-size: 40px;
+/* background-color: transparent; */
+/* font-size: bolder; */
+/* top: 100%; */
+height: 70px;
+background-color: cadetblue;
+border: none;
+border-radius:20px;
+}
+#rightbtn{
+    border-radius:20px;
+    background-color: cadetblue;
+border: none;
+font-size: 40px;
 
+height: 70px;
 
+    position: absolute;
+    right: 100px;
+    margin-top: 20%;
+z-index: 2000;
+color: white;
+font-weight: bolder;
+}
+body{
+    overflow-x: hidden;
+}
+#container3{
+    overflow-x: hidden;
+    white-space: nowrap;
+}
 /* Style for the overlay */
 .overlay {
     display: none;
@@ -1230,6 +1267,7 @@ body {
     height: 200px;
     width: 400px;
     border-radius: 20px;
+    margin-left: 30px;
 }
 .imag{
     font-weight: bolder
@@ -1245,12 +1283,7 @@ body {
     font-size: 20px;
     font-weight: bolder
 }
-/* .down2 {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-} */
+
 .bubbles img {
     width: 50px;
     animation: bubble 7s linear infinite;
@@ -1367,8 +1400,15 @@ body {
 /* Style for the title container */
 .t12 {
     margin-bottom: 15px;
-}
+    display: flex;
+    flex-direction: column;
 
+    
+    
+}
+#imagediv{
+    display: inline;
+}
 /* Style for labels */
 label {
     display: block;
@@ -1382,6 +1422,7 @@ label {
     padding: 8px;
     box-sizing: border-box;
     margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 /* Style for the blog container */
@@ -1401,9 +1442,10 @@ label {
 
 /* Style for the blog label and textarea */
 #blogLabel {
-    display: block;
+    /* margin-left: 50px; */
+    /* display: block; */
     margin-bottom: 5px;
-    margin-left: -300px;
+    margin-left: -250px;
 }
 
 #TextField3 {

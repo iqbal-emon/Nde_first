@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = `
+    <button id="leftbtn">&#60;</button> <!-- "&#60;" represents the less-than symbol (<) -->
+<button id="rightbtn">&#62;</button> <!-- "&#62;" represents the greater-than symbol (>) -->
+
     <button id="newButton1">New</button>
     <div id="popupOverlay" class="overlay">
   <!-- Form container -->
@@ -17,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
              <label class="titileshow" for="text1">Title:</label>
     <input type="text" id="text1" name="TextField1" class="form-input" required>
             </div>
-            
-            <label class="imag" id="imageLabel" for="TextField2">Image:</label>
+            <div id="imagediv">
+          
             <input type="file" id="TextField2" name="ImageField" required>
-            
+            </div>
         </div>
         <div class="down2">
             <label id="blogLabel">Blog:</label>
@@ -43,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   </div>
 </div>
     <!-- Your navbar HTML goes here -->
+    
     `;
   
     const navbarContainer = document.getElementById("container3");
@@ -124,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 myForm.addEventListener('submit', function (event) {
                     event.preventDefault();
-// console.log("submitted");
+console.log("submitted");
      
         card0123.innerHTML=null;
         document.getElementById('popupOverlay').style.display = 'none';
@@ -239,29 +243,67 @@ document.addEventListener("DOMContentLoaded", function () {
                     card.appendChild(button);
                     card0123.appendChild(card);
                     container3.appendChild(card0123);
-                    const observerOptions = {
-                        root: null,
-                        rootMargin: '0px',
-                        threshold: 0.5,
-                    };
-                
-                    const observer = new IntersectionObserver((entries, observer) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                entry.target.style.transition = 'opacity 1s, transform 1s';
-                                entry.target.style.opacity = 1;
-                                entry.target.style.transform = 'translateX(0)';
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, observerOptions);
-                
-                    card.style.opacity = 0;
-                    card.style.transform = 'translateX(60%)';
-                
-                    setTimeout(() => {
-                        observer.observe(card);
-                    }, 900 * index);
+                    if(cardData3.length>3){
+                    let currentIndex1 =0;
+                    let cardInterval; 
+                    document.getElementById("rightbtn").addEventListener("click", function () {
+                        currentIndex1 = (currentIndex1 + 1) % cardData3.length;
+                        console.log(currentIndex1);
+                        stopAutoScroll();
+                        updateContainerTransform();
+                    });
+                    var rightbtn1=  document.getElementById("leftbtn");
+                    
+                    rightbtn1.addEventListener("click", function () {
+                        
+                        currentIndex1 = (currentIndex1 - 1 + cardData3.length) % cardData3.length;
+                        console.log(currentIndex1);
+                        stopAutoScroll();
+
+                        updateContainerTransform();
+                    });
+                    function updateContainerTransform() {
+                        
+                        card.style.transition = 'transform 0.5s ease-out'; // Adjust the duration as needed
+                    
+                        // Set transform property to move left to right
+                        card.style.transform = `translateX(${-currentIndex1 * 80}%)`;
+                    
+                        // Other style modifications
+                        card.style.zIndex = 10000;
+                        card.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.6)";
+                    }
+                    
+                    cardInterval = setInterval(function () {
+                        currentIndex1 = (currentIndex1 + 1) % cardData3.length;
+                    
+                        // Disable transition temporarily when transitioning from last to first
+                        if (currentIndex1 === 0) {
+                            card.style.transition = 'none';
+                            card.style.transform = `translateX(${cardData3.length * 100}%)`;
+                            // Trigger reflow to apply the style immediately
+                            card.offsetHeight;
+                        }
+                    
+                        // Enable transition and update transform
+                        updateContainerTransform();
+                    
+                        // Re-enable transition after a short delay
+                        setTimeout(() => {
+                            card.style.transition = 'transform 0.5s ease-out';
+                        }, 10);
+                    
+                    }, 800);
+                    
+                    
+function stopAutoScroll() {
+    // Clear the interval to stop auto-scrolling
+    clearInterval(cardInterval);
+    
+    // Wait for 7 seconds before starting auto-scrolling again
+    
+}
+}
                 });
             })
             .catch(error => {
@@ -270,6 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
            
     }
+   
  
 });
 
