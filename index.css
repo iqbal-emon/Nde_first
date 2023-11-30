@@ -919,11 +919,13 @@ body {
 }
 
 .carde {
-
+    /* white-space: normal;  */
     display: inline-block;
     width: 400px;
     height: 500px;
     margin: 10px;
+    /* word-wrap: break-word; */
+    /* overflow-y: scroll; */
     /* border: 2px solid black; */
 
     background-size: cover;
@@ -987,7 +989,7 @@ body {
 
 .btn11 {
     height: 40px;
-    width: 80px;
+    width: 80px; 
     border: 1px solid black;
     background-color: transparent;
 

@@ -217,6 +217,7 @@ console.log("submitted");
                     
                     text.textContent = data1.textField2.substring(0, 60);
                     const fullText = document.createElement('p');
+    
                     fullText.classList.add('subtitle');
                     fullText.style.display = 'none';
                     fullText.textContent = data1.textField2;
@@ -230,12 +231,14 @@ console.log("submitted");
                             text.style.display = 'none';
                             fullText.style.display = 'block';
                             button.textContent = 'Read Less';
+                            
                         } else {
                             text.style.display = 'block';
                             fullText.style.display = 'none';
                             button.textContent = 'Read More';
                         }
                     });
+               
                     card.appendChild(imageElement);
                     card.appendChild(title);
                     card.appendChild(text);
@@ -243,6 +246,7 @@ console.log("submitted");
                     card.appendChild(button);
                     card0123.appendChild(card);
                     container3.appendChild(card0123);
+                    
                     if(cardData3.length>3){
                     let currentIndex1 =0;
                     let cardInterval; 
@@ -253,7 +257,7 @@ console.log("submitted");
                         updateContainerTransform();
                     });
                     var rightbtn1=  document.getElementById("leftbtn");
-                    
+                    let cardData2=[];
                     rightbtn1.addEventListener("click", function () {
                         
                         currentIndex1 = (currentIndex1 - 1 + cardData3.length) % cardData3.length;
@@ -264,37 +268,77 @@ console.log("submitted");
                     });
                     function updateContainerTransform() {
                         
+                        card.style.transition = 'transform 0.7s ease-out'; // Adjust the duration as needed
+                    
+                        // Set transform property to move left to right
+                        card.style.transform = `translateX(${-currentIndex1 * 80}%)`;
+                   
+                        // Other style modifications
+                        // card.style.zIndex = 10000;
+                        card.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.6)";
+                    }
+                    // cardData3={...cardData3,...cardData3}
+                    function updateContainerTransform() {
                         card.style.transition = 'transform 0.5s ease-out'; // Adjust the duration as needed
                     
                         // Set transform property to move left to right
                         card.style.transform = `translateX(${-currentIndex1 * 80}%)`;
                     
                         // Other style modifications
-                        card.style.zIndex = 10000;
                         card.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.6)";
+                    }
+                    
+                    function updateContainerTransform() {
+                        card.style.transition = 'transform 0.5s ease-out'; // Adjust the duration as needed
+                    
+                        // Set transform property to move left to right
+                        card.style.transform = `translateX(${-currentIndex1 * 80}%)`;
+                    
+                        // Other style modifications
+                        card.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.6)";
+                    
+                        // Add the provided styles
+                        // card.classList.add('carde');
                     }
                     
                     cardInterval = setInterval(function () {
                         currentIndex1 = (currentIndex1 + 1) % cardData3.length;
                     
-                        // Disable transition temporarily when transitioning from last to first
+                        
                         if (currentIndex1 === 0) {
+                          
                             card.style.transition = 'none';
-                            card.style.transform = `translateX(${cardData3.length * 100}%)`;
+                    
+                            // Set initial transform to move the last card out of the viewport
+                            card.style.transform = `translateX(${cardData3.length * 80}%)`;
+                    
                             // Trigger reflow to apply the style immediately
                             card.offsetHeight;
+                    
+                           
+                            const firstCard = cardData3.shift();
+                            cardData3.push(firstCard);
+                    
+                            
+                            card.style.transform = `translateX(${cardData3.length * 180}%)`;
+                    
+                            
+                            setTimeout(() => {
+                                card.style.transition = 'transform 0.6s ease-out';
+                    
+                                updateContainerTransform();
+                    
+                                setTimeout(() => {
+                                  
+                                }, 500); // Adjust the duration as needed
+                            }, 30);
+                        } else {
+                            // For non-last cards, apply the regular transformation
+                            updateContainerTransform();
                         }
-                    
-                        // Enable transition and update transform
-                        updateContainerTransform();
-                    
-                        // Re-enable transition after a short delay
-                        setTimeout(() => {
-                            card.style.transition = 'transform 0.5s ease-out';
-                        }, 10);
-                    
                     }, 800);
                     
+                       
                     
 function stopAutoScroll() {
     // Clear the interval to stop auto-scrolling
