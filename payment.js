@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Add the item to the map
       itemMap.set(name, {
-        CountQuantity: quantity, // Use quantity for the specific item
-        totalPrice: price * quantity, // Use quantity for the specific item
+        CountQuantity: quantity, 
+        totalPrice: price * quantity, 
         name,
         price,
         img,
@@ -101,9 +101,7 @@ cartItem4.appendChild(IncreaButton);
   }
 
   function handleDelete(itemName, itemPrice) {
-    // Implement logic to handle the delete button click
-    // This logic should decrease the quantity or remove the item if quantity is zero
-    // Update total price, quantity, and re-render the cart
+   
     if (storedQuantity[itemName] > 0) {
       storedQuantity[itemName]--;
       storedTotal -= itemPrice;
@@ -113,9 +111,7 @@ cartItem4.appendChild(IncreaButton);
     showCartDetails();
   }
  function handleIncrease(itemName, itemPrice) {
-    // Implement logic to handle the delete button click
-    // This logic should decrease the quantity or remove the item if quantity is zero
-    // Update total price, quantity, and re-render the cart
+    
     if (storedQuantity[itemName] > 0) {
       storedQuantity[itemName]++;
       storedTotal += itemPrice;

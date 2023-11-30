@@ -1,0 +1,250 @@
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Nde1st.Model;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Text;
+
+[ApiController]
+public class blogController : ControllerBase
+{
+    private readonly IConfiguration _configuration;
+
+    public blogController(IConfiguration config)
+    {
+        _configuration = config;
+    }
+
+    [HttpGet]
+    [Route("GetAllDetails")]
+    public List<ndeFirst> GetAllDetails()
+    {
+        List<ndeFirst> Lst = new List<ndeFirst>();
+
+        using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+        {
+            con.Open();
+
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Bloglist", con))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        ndeFirst dto = new ndeFirst
+                        {
+                            TextField1 = row["TextField1"].ToString(),
+
+                            TextField2 = row["TextField2"].ToString(),
+                            ImageFile = row["ImageFile"] != DBNull.Value
+                            ? ConvertToFormFile(row["ImageFile"].ToString(), "ImageFile", "image.jpg")
+                            : null
+                        };
+                        Lst.Add(dto);
+                            
+                    }
+
+                }
+            }
+        }
+
+        return Lst;
+    }
+    private FormFile ConvertToFormFile(string base64String, string fieldName, string fileName)
+    {
+        try
+        {
+            byte[] fileBytes = Convert.FromBase64String(base64String);
+
+            using (MemoryStream stream = new MemoryStream(fileBytes))
+            {
+                return new FormFile(stream, 0, fileBytes.Length, fieldName, fileName);
+            }
+        }
+        catch (FormatException ex)
+        {
+            // Log or handle the exception as needed
+            Console.WriteLine($"Error converting Base64 string to FormFile: {ex.Message}");
+            return null;
+        }
+    }
+
+    [HttpPost]
+    [Route("InsertBlog")]
+    public async Task<IActionResult> InsertBlogAsync([FromForm]ndeFirst blog)
+    {
+        try
+        {
+
+            using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Bloglist (TextField1, TextField2, ImageFile) VALUES (@TextField1, @TextField2,CAST(@ImageFile AS VARBINARY(MAX)))", con))
+                {
+                    cmd.Parameters.AddWithValue("@TextField1", blog.TextField1);
+                    Console.WriteLine($"Value of @TextField1: {blog.TextField1}");
+                    cmd.Parameters.AddWithValue("@TextField2", blog.TextField2);
+         
+                    if (blog.ImageFile != null && blog.ImageFile.Length > 0)
+                    {
+                     
+                        using (var memoryStream = new MemoryStream())
+                        {
+                            await blog.ImageFile.CopyToAsync(memoryStream);
+                            byte[] imageBytes = memoryStream.ToArray();
+                            cmd.Parameters.AddWithValue("@ImageFile", imageBytes);
+                      
+                        }
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@ImageFile", DBNull.Value);
+                    }
+
+
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    Console.WriteLine($"Rows Affected: {rowsAffected}");
+                }
+                
+                con.Close();
+            }
+
+            return Ok("Blog inserted successfully");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+        }
+    }
+
+ 
+}
+
+//working StatusCode
+
+using Microsoft.AspNetCore.DataProtection.KeyManagement;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Nde1st.Model;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.IO;
+using System.Text;
+
+[ApiController]
+public class blogController : ControllerBase
+{
+    private readonly IConfiguration _configuration;
+
+    public blogController(IConfiguration config)
+    {
+        _configuration = config;
+    }
+
+    [HttpGet]
+    [Route("GetAllDetails")]
+    public List<ndeFirst> GetAllDetails()
+    {
+        List<ndeFirst> Lst = new List<ndeFirst>();
+
+        using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+        {
+            con.Open();
+
+            using (SqlCommand cmd = new SqlCommand("SELECT * FROM Bloglist", con))
+            {
+                using (SqlDataAdapter da = new SqlDataAdapter(cmd))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        ndeFirst dto = new ndeFirst
+                        {
+                            TextField1 = row["TextField1"].ToString(),
+
+                            TextField2 = row["TextField2"].ToString(),
+                            ImageField = row["ImageField"].ToString()
+                        };
+                        Lst.Add(dto);
+                            
+                    }
+
+                }
+            }
+        }
+
+        return Lst;
+    }
+
+    [HttpPost]
+    [Route("InsertBlog")]
+    public IActionResult InsertBlog(ndeFirst blog)
+    {
+        try
+        {
+
+            using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            {
+                con.Open();
+
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Bloglist (TextField1, TextField2, ImageField) VALUES (@TextField1, @TextField2, CONVERT(varbinary(max), @ImageField))", con))
+                {
+                    cmd.Parameters.AddWithValue("@TextField1", blog.TextField1);
+                    Console.WriteLine($"Value of @TextField1: {blog.TextField1}");
+                    cmd.Parameters.AddWithValue("@TextField2", blog.TextField2);
+                    cmd.Parameters.AddWithValue("@ImageField", blog.ImageField);
+
+
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    Console.WriteLine($"Rows Affected: {rowsAffected}");
+                }
+
+                con.Close();
+            }
+
+            return Ok("Blog inserted successfully");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Error: {ex.Message}");
+        }
+    }
+
+ 
+}
+
+
+
+
+public byte[] ImageField1 { get; set; }
+public ndeFirst()
+{
+    ImageField1 = null; // Set the default value
+}
+
+
+
+ ImageField1 = row["ImageField"] != DBNull.Value
+ ? ConvertToByteArray(row["ImageField"])
+ : null
+

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Nde1st.props" />
+</Project>

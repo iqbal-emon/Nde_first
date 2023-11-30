@@ -117,11 +117,11 @@ function showCartDetails() {
   let total = 0;
 
   const uniqueItems = Array.from(new Set(cartAdd.map(item => item.name)));
+let uniqueItemsLength = uniqueItems.length;
 
   uniqueItems.forEach(itemName => {
     const itemInstances = cartAdd.filter(item => item.name === itemName);
     const item = itemInstances[0];
-
     const cartItem4 = document.createElement('div');
     cartItem4.classList.add('div8');
     cartItem4.style.width = '100px';
@@ -193,7 +193,7 @@ function showCartDetails() {
   });
 
   localStorage.setItem('itemsArray', JSON.stringify(itemsArray));
-  Count1.innerHTML = count;
+  Count1.innerHTML = uniqueItemsLength;
   localStorage.setItem('total', total.toString());
 
   dropdownContent.appendChild(cartItem2);

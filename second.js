@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>
    </div>
+
+
+
+
    </div>
   
   `;
@@ -49,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (navbarContainer) {
     navbarContainer.innerHTML = navbar;
   }
-
+//For Animation right to left
  var observerOptions = {
   root: null,
   rootMargin: '0px',
